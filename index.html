@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uptime Studio — Telegram-боты для малого бизнеса</title>
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: #FFFFFF;
+      color: #0F1D3A;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== GRADIENT TEXT ===== */
+    .gradient {
+      background: linear-gradient(135deg, #0A1F44, #2563EB);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ===== SECTION TITLES ===== */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 48px;
+      letter-spacing: -0.5px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px 60px;
+      background: #F7F9FC;
+    }
+    .hero-logo {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: #4A5568;
+      margin-top: 8px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .hero-slogan {
+      font-size: 1.25rem;
+      color: #2D3748;
+      margin-top: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-btn {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 16px 40px;
+      background: #2563EB;
+      color: #FFFFFF;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background 0.25s, transform 0.2s;
+    }
+    .hero-btn:hover {
+      background: #1D4ED8;
+      transform: translateY(-2px);
+    }
+    .hero-btn:active {
+      transform: translateY(0);
+    }
+
+    /* ===== SERVICES ===== */
+    .services {
+      padding: 80px 0;
+      background: #FFFFFF;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 32px 24px;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .service-card:hover {
+      border-color: #2563EB;
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
+    }
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .service-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #0A1F44;
+    }
+    .service-card p {
+      font-size: 0.95rem;
+      color: #4A5568;
+    }
+
+    /* ===== PRICING ===== */
+    .pricing {
+      padding: 80px 0;
+      background: #F7F9FC;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .pricing-card {
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 32px 20px;
+      box-shadow: 0 2px 12px rgba(10, 31, 68, 0.06);
+      border: 1px solid transparent;
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+      display: flex;
+      flex-direction: column;
+    }
+    .pricing-card:hover {
+      border-color: #2563EB;
+      box-shadow: 0 6px 24px rgba(37, 99, 235, 0.1);
+      transform: translateY(-4px);
+    }
+    .pricing-card.featured {
+      border-color: #2563EB;
+      box-shadow: 0 0 0 2px #2563EB, 0 6px 24px rgba(37, 99, 235, 0.12);
+      position: relative;
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #2563EB;
+      color: #FFFFFF;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 14px;
+      border-radius: 6px;
+    }
+    .pricing-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0A1F44;
+      margin-bottom: 4px;
+    }
+    .pricing-price {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #2563EB;
+      margin-bottom: 4px;
+    }
+    .pricing-price small {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #718096;
+    }
+    .pricing-term {
+      font-size: 0.9rem;
+      color: #718096;
+      margin-bottom: 16px;
+    }
+    .pricing-features {
+      list-style: none;
+      flex: 1;
+    }
+    .pricing-features li {
+      font-size: 0.9rem;
+      color: #4A5568;
+      padding: 5px 0;
+      border-bottom: 1px solid #EDF2F7;
+    }
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+    .pricing-features li::before {
+      content: "✓ ";
+      color: #2563EB;
+      font-weight: 700;
+    }
+
+    /* ===== PORTFOLIO ===== */
+    .portfolio {
+      padding: 80px 0;
+      background: #FFFFFF;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .portfolio-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+    }
+    .portfolio-card:hover {
+      border-color: #2563EB;
+      box-shadow: 0 6px 24px rgba(37, 99, 235, 0.1);
+      transform: translateY(-4px);
+    }
+    .portfolio-icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+    .portfolio-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0A1F44;
+      margin-bottom: 8px;
+    }
+    .portfolio-card p {
+      font-size: 0.9rem;
+      color: #4A5568;
+      margin-bottom: 16px;
+    }
+    .portfolio-btn {
+      display: inline-block;
+      padding: 10px 22px;
+      background: #2563EB;
+      color: #FFFFFF;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.25s;
+    }
+    .portfolio-btn:hover {
+      background: #1D4ED8;
+    }
+
+    /* ===== WHY ===== */
+    .why {
+      padding: 80px 0;
+      background: #F7F9FC;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .why-card {
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 32px 24px;
+      box-shadow: 0 2px 12px rgba(10, 31, 68, 0.06);
+      border: 1px solid transparent;
+      transition: border-color 0.25s, box-shadow 0.25s;
+      text-align: center;
+    }
+    .why-card:hover {
+      border-color: #2563EB;
+      box-shadow: 0 6px 24px rgba(37, 99, 235, 0.08);
+    }
+    .why-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .why-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0A1F44;
+      margin-bottom: 8px;
+    }
+    .why-card p {
+      font-size: 0.95rem;
+      color: #4A5568;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      padding: 48px 24px;
+      text-align: center;
+      background: #0A1F44;
+      color: #FFFFFF;
+    }
+    .footer-btn {
+      display: inline-block;
+      padding: 14px 36px;
+      background: #2563EB;
+      color: #FFFFFF;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background 0.25s, transform 0.2s;
+      margin-bottom: 20px;
+    }
+    .footer-btn:hover {
+      background: #1D4ED8;
+      transform: translateY(-2px);
+    }
+    .footer-copy {
+      font-size: 0.85rem;
+      color: #A0AEC0;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .hero-logo {
+        font-size: 2.2rem;
+      }
+      .hero-sub {
+        font-size: 0.9rem;
+      }
+      .hero-slogan {
+        font-size: 1.05rem;
+      }
+      .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 32px;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .why-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .hero {
+        min-height: auto;
+        padding: 60px 24px 48px;
+      }
+      .services, .pricing, .portfolio, .why {
+        padding: 56px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div>
+      <h1 class="hero-logo"><span class="gradient">Uptime Studio</span></h1>
+      <p class="hero-sub">IT Solutions &amp; CRM Integrations</p>
+      <p class="hero-slogan">Telegram-боты для малого бизнеса — от идеи до запуска за 2 часа</p>
+      <a class="hero-btn" href="https://t.me/alex_yanakov" target="_blank" rel="noopener">&#9993; Написать в Telegram</a>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-title"><span class="gradient">Что я делаю</span></h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">&#128172;</div>
+          <h3>Боты для записи клиентов</h3>
+          <p>Форма записи, база данных, уведомления о новых заявках — всё в Telegram.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128202;</div>
+          <h3>Веб-админка (CRM)</h3>
+          <p>Удобный просмотр заявок, управление клиентами и экспорт данных через личный кабинет.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#129302;</div>
+          <h3>AI-модуль</h3>
+          <p>Голосовые сообщения, анализ фото и документов — расширьте возможности бота.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#9729;&#65039;</div>
+          <h3>Хостинг и поддержка 24/7</h3>
+          <p>Бот работает без перебоев. Мониторинг, бэкапы и срочные правки — круглосуточно.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2 class="section-title"><span class="gradient">Тарифы</span></h2>
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <div class="pricing-name">Визитка</div>
+          <div class="pricing-price">15 000 &#8381;</div>
+          <div class="pricing-term">до 5 дней</div>
+          <ul class="pricing-features">
+            <li>Меню и информация об услугах</li>
+            <li>Простая форма связи</li>
+            <li>Базовая настройка</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Рекомендую</div>
+          <div class="pricing-name">Запись</div>
+          <div class="pricing-price">30 000 &#8381;</div>
+          <div class="pricing-term">до 10 дней</div>
+          <ul class="pricing-features">
+            <li>Многошаговая форма записи</li>
+            <li>База данных клиентов</li>
+            <li>Веб-админка для заявок</li>
+            <li>Excel-экспорт</li>
+            <li>Уведомления в Telegram</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-name">Индивидуальный</div>
+          <div class="pricing-price">от 50 000 &#8381;</div>
+          <div class="pricing-term">срок индивидуально</div>
+          <ul class="pricing-features">
+            <li>CRM с календарём</li>
+            <li>Приём оплат</li>
+            <li>Сложная бизнес-логика</li>
+            <li>AI-модуль</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-name">Обслуживание</div>
+          <div class="pricing-price">3 000 &#8381; <small>/мес</small></div>
+          <div class="pricing-term">ежемесячно</div>
+          <ul class="pricing-features">
+            <li>Хостинг и домен</li>
+            <li>Мониторинг 24/7</li>
+            <li>До 3 правок в месяц</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO ===== -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <h2 class="section-title"><span class="gradient">Портфолио</span></h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <div class="portfolio-icon">&#127947;&#8205;&#9794;&#65039;</div>
+          <h3>Фитнес-тренер</h3>
+          <p>Бот для записи на тренировки, расписание и напоминания клиентам.</p>
+          <a class="portfolio-btn" href="https://t.me/Demo_Fitness_Coach_bot" target="_blank" rel="noopener">&#10145; Попробовать бота</a>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-icon">&#128150;</div>
+          <h3>Психолог</h3>
+          <p>Бот для записи на консультации с автоматическим подбором времени.</p>
+          <a class="portfolio-btn" href="https://t.me/Demo_psychologist_helper_bot" target="_blank" rel="noopener">&#10145; Попробовать бота</a>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-icon">&#127891;</div>
+          <h3>Репетитор английского</h3>
+          <p>Бот для записи на уроки, проверки домашних заданий и обратной связи.</p>
+          <a class="portfolio-btn" href="https://t.me/test_teacher_2026_bot" target="_blank" rel="noopener">&#10145; Попробовать бота</a>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-icon">&#129530;</div>
+          <h3>Стоматология</h3>
+          <p>Бот для записи к врачу, напоминания о визите и хранение истории.</p>
+          <a class="portfolio-btn" href="https://t.me/Demo_uptime_dantist_bot" target="_blank" rel="noopener">&#10145; Попробовать бота</a>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-icon">&#128133;</div>
+          <h3>Мастер маникюра</h3>
+          <p>Бот для записи, каталог работ и уведомления о свободных слотах.</p>
+          <a class="portfolio-btn" href="https://t.me/demo_beauty_nail_bot" target="_blank" rel="noopener">&#10145; Попробовать бота</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY ===== -->
+  <section class="why" id="why">
+    <div class="container">
+      <h2 class="section-title"><span class="gradient">Почему я</span></h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">&#9889;</div>
+          <h3>Скорость</h3>
+          <p>Базовый бот готов за ~2 часа с момента согласования ТЗ.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">&#128737;&#65039;</div>
+          <h3>Гарантия 14 дней</h3>
+          <p>После запуска бесплатно исправляю любые баги в течение двух недель.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">&#128221;</div>
+          <h3>Легально и прозрачно</h3>
+          <p>Самозанятый, работаю по договору, выдаю чеки через «Мой налог».</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <a class="footer-btn" href="https://t.me/alex_yanakov" target="_blank" rel="noopener">&#9993; Написать в Telegram</a>
+    <p class="footer-copy">Uptime Studio &mdash; IT Solutions &amp; CRM Integrations</p>
+  </footer>
+
+</body>
+</html>
