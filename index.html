@@ -838,30 +838,47 @@
     document.head.appendChild(lenisScript);
   </script>
 
-  <!-- Инициализация иконок Lucide -->
+  
+    <!-- Инициализация иконок Lucide -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       if (typeof lucide !== 'undefined') {
         var svgNS = 'http://www.w3.org/2000/svg';
-        var defs = document.querySelector('#lucide-gradient-defs');
-        if (!defs) {
-          defs = document.createElementNS(svgNS, 'defs');
-          defs.id = 'lucide-gradient-defs';
+        var svgContainer = document.querySelector('#lucide-svg-container');
+        
+        if (!svgContainer) {
+          // Создаем скрытый SVG-контейнер для градиента (это решит проблему с видимостью)
+          svgContainer = document.createElementNS(svgNS, 'svg');
+          svgContainer.id = 'lucide-svg-container';
+          svgContainer.setAttribute('width', '0');
+          svgContainer.setAttribute('height', '0');
+          svgContainer.style.position = 'absolute';
+          
+          var defs = document.createElementNS(svgNS, 'defs');
           var grad = document.createElementNS(svgNS, 'linearGradient');
           grad.id = 'lucide-gradient';
           grad.setAttribute('x1', '0%'); grad.setAttribute('y1', '0%');
           grad.setAttribute('x2', '100%'); grad.setAttribute('y2', '100%');
+          
           var s1 = document.createElementNS(svgNS, 'stop');
           s1.setAttribute('offset', '0%'); s1.setAttribute('stop-color', '#3b82f6');
+          
           var s2 = document.createElementNS(svgNS, 'stop');
           s2.setAttribute('offset', '100%'); s2.setAttribute('stop-color', '#8b5cf6');
-          grad.appendChild(s1); grad.appendChild(s2);
+          
+          grad.appendChild(s1); 
+          grad.appendChild(s2);
           defs.appendChild(grad);
-          document.body.prepend(defs);
+          svgContainer.appendChild(defs);
+          
+          // Вставляем правильный SVG контейнер в body
+          document.body.prepend(svgContainer);
         }
 
+        // Отрисовка иконок
         lucide.createIcons({ strokeWidth: 1.5 });
 
+        // Применяем градиент к иконкам
         setTimeout(function() {
           document.querySelectorAll('.lucide-circle svg, .lucide-circle-lg svg, .lucide-circle-sm svg').forEach(function(svg) {
             svg.setAttribute('stroke', 'url(#lucide-gradient)');
@@ -870,6 +887,7 @@
       }
     });
   </script>
+
 
 </body>
 </html>
