@@ -326,24 +326,81 @@
       background: rgba(255,255,255,0.05);
     }
 
-    /* Feature icon */
-    .feature-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
+    /* Feature icon — Lucide circle */
+    .lucide-circle-lg {
+      width: 80px; height: 80px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-      background: rgba(59,130,246,0.1);
-      border: 1px solid rgba(59,130,246,0.2);
-      transition: all 0.4s;
+      background: radial-gradient(circle, rgba(59,130,246,0.15), rgba(15,23,42,0.4));
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(59,130,246,0.3);
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      flex-shrink: 0;
     }
-    .glass:hover .feature-icon {
-      background: rgba(59,130,246,0.2);
-      border-color: rgba(59,130,246,0.4);
+    .lucide-circle-lg svg {
+      width: 40px; height: 40px;
+      animation: iconRotate 20s linear infinite;
+    }
+    .lucide-circle-lg:hover { 
+      border-color: rgba(139,92,246,0.5);
+      box-shadow: 0 0 40px rgba(59,130,246,0.3);
+    }
+    .lucide-circle-lg:hover svg { animation-duration: 8s; }
+
+    .lucide-circle {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, rgba(59,130,246,0.12), rgba(15,23,42,0.3));
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(59,130,246,0.25);
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      flex-shrink: 0;
+    }
+    .lucide-circle svg {
+      width: 32px; height: 32px;
+      animation: iconRotate 20s linear infinite;
+    }
+    .glass:hover .lucide-circle {
+      border-color: rgba(139,92,246,0.5);
+      box-shadow: 0 0 30px rgba(59,130,246,0.25);
       transform: scale(1.1);
+    }
+    .glass:hover .lucide-circle svg { animation-duration: 6s; }
+
+    .lucide-circle-sm {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, rgba(59,130,246,0.12), rgba(15,23,42,0.3));
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(59,130,246,0.25);
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      flex-shrink: 0;
+      margin-bottom: 16px;
+    }
+    .lucide-circle-sm svg {
+      width: 28px; height: 28px;
+      animation: iconRotate 20s linear infinite;
+    }
+    .glass:hover .lucide-circle-sm {
+      border-color: rgba(139,92,246,0.5);
+      box-shadow: 0 0 25px rgba(59,130,246,0.2);
+      transform: scale(1.1);
+    }
+    .glass:hover .lucide-circle-sm svg { animation-duration: 5s; }
+
+    @keyframes iconRotate {
+      to { transform: rotate(360deg); }
     }
 
     /* CTA section background */
@@ -406,7 +463,11 @@
     <canvas id="hero-canvas"></canvas>
     <div class="mesh-bg"></div>
     <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-      <div class="floating mb-6 text-5xl md:text-6xl">🤖</div>
+      <div class="floating mb-6">
+        <div class="lucide-circle-lg mx-auto">
+          <i data-lucide="bot"></i>
+        </div>
+      </div>
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold font-display mb-4 leading-tight text-gradient reveal">
         Telegram-боты<br>для бизнеса
       </h1>
@@ -431,28 +492,36 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Card 1 -->
         <a href="https://t.me/demo_beauty_nail_bot" target="_blank" rel="noopener" class="no-underline glass p-8 flex flex-col items-start gap-4 reveal cursor-pointer" style="display:block;">
-          <div class="feature-icon">💅</div>
+          <div class="lucide-circle">
+            <i data-lucide="sparkles"></i>
+          </div>
           <h3 class="text-xl font-bold font-display text-white">Мастер маникюра</h3>
           <p class="text-slate-400 text-sm leading-relaxed">Запись на услуги, каталог работ, портфолио, уведомления о свободных слотах и напоминания клиентам.</p>
           <span class="inline-flex items-center gap-2 text-accent font-semibold text-sm mt-2">Попробовать бота <span style="display:inline-block;transition:transform 0.3s;">→</span></span>
         </a>
         <!-- Card 2 -->
         <a href="https://t.me/test_teacher_2026_bot" target="_blank" rel="noopener" class="no-underline glass p-8 flex flex-col items-start gap-4 reveal cursor-pointer" style="display:block;">
-          <div class="feature-icon">📚</div>
+          <div class="lucide-circle">
+            <i data-lucide="graduation-cap"></i>
+          </div>
           <h3 class="text-xl font-bold font-display text-white">Репетитор английского</h3>
           <p class="text-slate-400 text-sm leading-relaxed">Расписание уроков, запись на занятия, домашние задания, обратная связь и оплата прямо в боте.</p>
           <span class="inline-flex items-center gap-2 text-accent font-semibold text-sm mt-2">Попробовать бота <span style="display:inline-block;transition:transform 0.3s;">→</span></span>
         </a>
         <!-- Card 3 -->
         <a href="https://t.me/Demo_uptime_dantist_bot" target="_blank" rel="noopener" class="no-underline glass p-8 flex flex-col items-start gap-4 reveal cursor-pointer" style="display:block;">
-          <div class="feature-icon">🦷</div>
+          <div class="lucide-circle">
+            <i data-lucide="heart-pulse"></i>
+          </div>
           <h3 class="text-xl font-bold font-display text-white">Стоматология</h3>
           <p class="text-slate-400 text-sm leading-relaxed">Многошаговая запись к врачу, история визитов, напоминания о приёме и сбор обратной связи.</p>
           <span class="inline-flex items-center gap-2 text-accent font-semibold text-sm mt-2">Попробовать бота <span style="display:inline-block;transition:transform 0.3s;">→</span></span>
         </a>
         <!-- Card 4 -->
         <a href="https://t.me/Demo_Fitness_Coach_bot" target="_blank" rel="noopener" class="no-underline glass p-8 flex flex-col items-start gap-4 reveal cursor-pointer" style="display:block;">
-          <div class="feature-icon">🏋️</div>
+          <div class="lucide-circle">
+            <i data-lucide="dumbbell"></i>
+          </div>
           <h3 class="text-xl font-bold font-display text-white">Фитнес-тренер</h3>
           <p class="text-slate-400 text-sm leading-relaxed">Запись на тренировки, расписание, напоминания, отслеживание прогресса и мотивационные сообщения.</p>
           <span class="inline-flex items-center gap-2 text-accent font-semibold text-sm mt-2">Попробовать бота <span style="display:inline-block;transition:transform 0.3s;">→</span></span>
@@ -470,22 +539,30 @@
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="glass p-6 text-center reveal">
-          <div class="text-4xl mb-4" style="display:inline-block;">⚡</div>
+          <div class="lucide-circle-sm">
+            <i data-lucide="zap"></i>
+          </div>
           <h3 class="text-lg font-bold font-display text-white mb-2">Скорость</h3>
           <p class="text-slate-400 text-sm">Базовый бот готов за ~2 часа с момента согласования технического задания</p>
         </div>
         <div class="glass p-6 text-center reveal">
-          <div class="text-4xl mb-4" style="display:inline-block;">🛡️</div>
+          <div class="lucide-circle-sm">
+            <i data-lucide="shield-check"></i>
+          </div>
           <h3 class="text-lg font-bold font-display text-white mb-2">Гарантия 14 дней</h3>
           <p class="text-slate-400 text-sm">Бесплатно исправляю любые баги в течение двух недель после запуска</p>
         </div>
         <div class="glass p-6 text-center reveal">
-          <div class="text-4xl mb-4" style="display:inline-block;">📄</div>
+          <div class="lucide-circle-sm">
+            <i data-lucide="file-check"></i>
+          </div>
           <h3 class="text-lg font-bold font-display text-white mb-2">Легально</h3>
           <p class="text-slate-400 text-sm">Самозанятый, работаю по договору, выдаю чеки через «Мой налог»</p>
         </div>
         <div class="glass p-6 text-center reveal">
-          <div class="text-4xl mb-4" style="display:inline-block;">🔧</div>
+          <div class="lucide-circle-sm">
+            <i data-lucide="headphones"></i>
+          </div>
           <h3 class="text-lg font-bold font-display text-white mb-2">Поддержка 24/7</h3>
           <p class="text-slate-400 text-sm">Мониторинг, бэкапы и срочные правки — бот работает без перебоев</p>
         </div>
@@ -613,6 +690,37 @@
   </footer>
 
   <script>
+    <!-- ===== Lucide Icons + Gradient Stroke ===== -->
+    lucide.createIcons({
+      strokeWidth: 1.5,
+      color: '#3b82f6',
+    });
+
+    (function injectGradient() {
+      var svgNS = 'http://www.w3.org/2000/svg';
+      var existing = document.getElementById('lucide-gradient');
+      if (existing) return;
+      var defs = document.createElementNS(svgNS, 'defs');
+      var grad = document.createElementNS(svgNS, 'linearGradient');
+      grad.id = 'lucide-gradient';
+      grad.setAttribute('x1', '0%'); grad.setAttribute('y1', '0%');
+      grad.setAttribute('x2', '100%'); grad.setAttribute('y2', '100%');
+      var s1 = document.createElementNS(svgNS, 'stop');
+      s1.setAttribute('offset', '0%'); s1.setAttribute('stop-color', '#3b82f6');
+      var s2 = document.createElementNS(svgNS, 'stop');
+      s2.setAttribute('offset', '100%'); s2.setAttribute('stop-color', '#8b5cf6');
+      grad.appendChild(s1); grad.appendChild(s2);
+      defs.appendChild(grad);
+      document.body.insertBefore(defs, document.body.firstChild);
+    })();
+
+    setTimeout(function() {
+      document.querySelectorAll('.lucide-circle svg, .lucide-circle-lg svg, .lucide-circle-sm svg').forEach(function(svg) {
+        svg.setAttribute('stroke', 'url(#lucide-gradient)');
+        svg.setAttribute('stroke-width', '1.5');
+      });
+    }, 100);
+
     // Preloader
     window.addEventListener('load', () => {
       setTimeout(() => {
