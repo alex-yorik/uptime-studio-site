@@ -343,6 +343,7 @@
     .lucide-circle-lg svg {
       width: 40px; height: 40px;
       animation: iconRotate 20s linear infinite;
+      color: var(--accent);
     }
     .lucide-circle-lg:hover { 
       border-color: rgba(139,92,246,0.5);
@@ -366,6 +367,7 @@
     .lucide-circle svg {
       width: 32px; height: 32px;
       animation: iconRotate 20s linear infinite;
+      color: var(--accent);
     }
     .glass:hover .lucide-circle {
       border-color: rgba(139,92,246,0.5);
@@ -391,6 +393,7 @@
     .lucide-circle-sm svg {
       width: 28px; height: 28px;
       animation: iconRotate 20s linear infinite;
+      color: var(--accent);
     }
     .glass:hover .lucide-circle-sm {
       border-color: rgba(139,92,246,0.5);
@@ -690,37 +693,6 @@
   </footer>
 
   <script>
-    <!-- ===== Lucide Icons + Gradient Stroke ===== -->
-    lucide.createIcons({
-      strokeWidth: 1.5,
-      color: '#3b82f6',
-    });
-
-    (function injectGradient() {
-      var svgNS = 'http://www.w3.org/2000/svg';
-      var existing = document.getElementById('lucide-gradient');
-      if (existing) return;
-      var defs = document.createElementNS(svgNS, 'defs');
-      var grad = document.createElementNS(svgNS, 'linearGradient');
-      grad.id = 'lucide-gradient';
-      grad.setAttribute('x1', '0%'); grad.setAttribute('y1', '0%');
-      grad.setAttribute('x2', '100%'); grad.setAttribute('y2', '100%');
-      var s1 = document.createElementNS(svgNS, 'stop');
-      s1.setAttribute('offset', '0%'); s1.setAttribute('stop-color', '#3b82f6');
-      var s2 = document.createElementNS(svgNS, 'stop');
-      s2.setAttribute('offset', '100%'); s2.setAttribute('stop-color', '#8b5cf6');
-      grad.appendChild(s1); grad.appendChild(s2);
-      defs.appendChild(grad);
-      document.body.insertBefore(defs, document.body.firstChild);
-    })();
-
-    setTimeout(function() {
-      document.querySelectorAll('.lucide-circle svg, .lucide-circle-lg svg, .lucide-circle-sm svg').forEach(function(svg) {
-        svg.setAttribute('stroke', 'url(#lucide-gradient)');
-        svg.setAttribute('stroke-width', '1.5');
-      });
-    }, 100);
-
     // Preloader
     window.addEventListener('load', () => {
       setTimeout(() => {
@@ -865,5 +837,39 @@
     };
     document.head.appendChild(lenisScript);
   </script>
+
+  <!-- Инициализация иконок Lucide -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') {
+        var svgNS = 'http://www.w3.org/2000/svg';
+        var defs = document.querySelector('#lucide-gradient-defs');
+        if (!defs) {
+          defs = document.createElementNS(svgNS, 'defs');
+          defs.id = 'lucide-gradient-defs';
+          var grad = document.createElementNS(svgNS, 'linearGradient');
+          grad.id = 'lucide-gradient';
+          grad.setAttribute('x1', '0%'); grad.setAttribute('y1', '0%');
+          grad.setAttribute('x2', '100%'); grad.setAttribute('y2', '100%');
+          var s1 = document.createElementNS(svgNS, 'stop');
+          s1.setAttribute('offset', '0%'); s1.setAttribute('stop-color', '#3b82f6');
+          var s2 = document.createElementNS(svgNS, 'stop');
+          s2.setAttribute('offset', '100%'); s2.setAttribute('stop-color', '#8b5cf6');
+          grad.appendChild(s1); grad.appendChild(s2);
+          defs.appendChild(grad);
+          document.body.prepend(defs);
+        }
+
+        lucide.createIcons({ strokeWidth: 1.5 });
+
+        setTimeout(function() {
+          document.querySelectorAll('.lucide-circle svg, .lucide-circle-lg svg, .lucide-circle-sm svg').forEach(function(svg) {
+            svg.setAttribute('stroke', 'url(#lucide-gradient)');
+          });
+        }, 50);
+      }
+    });
+  </script>
+
 </body>
 </html>
