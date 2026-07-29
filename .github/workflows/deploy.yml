@@ -1,0 +1,23 @@
+name: Deploy Bots
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Pull latest changes
+        run: |
+          cd /путь/к/вашему/проекту
+          git pull origin main
+
+      - name: Restart Docker containers
+        run: |
+          cd /путь/к/вашему/проекту
+          docker-compose pull
+          docker-compose up -d
