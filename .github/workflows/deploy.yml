@@ -13,11 +13,11 @@ jobs:
 
       - name: Pull latest changes
         run: |
-          cd /путь/к/вашему/проекту
+          cd /opt/uptime-studio-site
           git pull origin main
 
       - name: Restart Docker containers
         run: |
-          cd /путь/к/вашему/проекту
+          cd /opt/uptime-studio-site
           docker-compose pull
           docker-compose up -d
