@@ -62,9 +62,20 @@
       margin: 0;
       overflow-x: hidden;
       min-height: 100vh;
+      font-size: 16px;
+      line-height: 1.7;
     }
     h1, h2, h3, .display-font {
       font-family: '"Clash Display"', sans-serif;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+    h2 {
+      line-height: 1.2;
+      margin-bottom: 16px;
     }
 
     /* Grain texture */
@@ -308,7 +319,21 @@
 
     /* Section spacing */
     .section-py {
-      padding: 120px 0;
+      padding: 140px 0;
+    }
+
+    /* CTA buttons */
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .cta-buttons a {
+      min-width: 200px;
+      text-align: center;
     }
 
     /* Nav link */
@@ -428,9 +453,19 @@
 
     @media (max-width: 768px) {
       .header { padding: 12px 16px; }
-      .section-py { padding: 80px 0; }
+      .section-py { padding: 96px 0; }
       .cursor { display: none; }
       #hero-canvas { opacity: 0.3; }
+    }
+
+    @media (max-width: 640px) {
+      .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+      .cta-buttons a {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -465,24 +500,24 @@
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);">
     <canvas id="hero-canvas"></canvas>
     <div class="mesh-bg"></div>
-    <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-      <div class="floating mb-6">
+    <div class="relative z-10 text-center px-6 md:px-8 max-w-3xl mx-auto">
+      <div class="floating mb-8 md:mb-10">
         <div class="lucide-circle-lg mx-auto">
           <i data-lucide="bot"></i>
         </div>
       </div>
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold font-display mb-4 leading-tight text-gradient reveal">
-        Готовая платформа для записи клиентов —<br>под вашу нишу за несколько дней
+      <h1 class="font-bold font-display text-gradient reveal">
+        Telegram-боты для записи клиентов
       </h1>
-      <p class="text-lg md:text-xl text-slate-300 mb-4 max-w-2xl mx-auto reveal" style="animation-delay:0.2s;">
-        Telegram-бот с формой записи, мини-CRM и веб-админкой. Не типовой шаблон «с нуля», а обкатанное решение — уже работает в стоматологии, барбершопах/нейл-мастерских, фитнесе и репетиторстве.
+      <p class="text-xl md:text-2xl text-slate-300 mb-6 max-w-2xl mx-auto reveal" style="animation-delay:0.2s;">
+        Готовая платформа под вашу нишу за 3-5 дней
       </p>
-      <p class="text-sm md:text-base text-slate-400 mb-10 max-w-2xl mx-auto reveal" style="animation-delay:0.3s;">
-        Одна платформа, разные ниши. Мы не собираем бота с чистого листа под каждого клиента — у нас есть готовая архитектура (запись → мини-CRM в Telegram → веб-админка с экспортом в Excel), которую адаптируем под ваш бизнес: тексты, услуги, цены, оформление. Это значит быстрее запуск и меньше риск, что что-то «не взлетит» — механика уже проверена на живых демо.
+      <p class="text-base md:text-lg text-slate-400 max-w-2xl mx-auto reveal" style="animation-delay:0.3s;">
+        Не пишем с нуля — адаптируем проверенное решение под ваш бизнес. Уже работает в стоматологии, beauty-сфере, фитнесе и образовании.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center reveal" style="animation-delay:0.4s;">
+      <div class="cta-buttons reveal" style="animation-delay:0.4s;">
         <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener" class="btn-gradient no-underline"><span>Обсудить проект</span></a>
-        <a href="#portfolio" class="btn-outline no-underline">Смотреть портфолио</a>
+        <a href="#portfolio" class="btn-outline no-underline">Смотреть демо</a>
       </div>
     </div>
   </section>
@@ -502,7 +537,7 @@
             <i data-lucide="sparkles"></i>
           </div>
           <h3 class="text-xl font-bold font-display text-white">Мастера красоты (маникюр)</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Запись на пробный визит.</p>
+          <p class="text-slate-400 text-base leading-relaxed">Запись на пробный визит.</p>
           <span class="inline-flex items-center gap-2 text-accent font-semibold text-sm mt-2">Попробовать бота <span style="display:inline-block;transition:transform 0.3s;">→</span></span>
         </a>
         <!-- Card 2 -->
@@ -511,7 +546,7 @@
             <i data-lucide="graduation-cap"></i>
           </div>
           <h3 class="text-xl font-bold font-display text-white">Репетиторы/преподаватели</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Запись на пробный урок.</p>
+          <p class="text-slate-400 text-base leading-relaxed">Запись на пробный урок.</p>
           <span class="inline-flex items-center gap-2 text-accent font-semibold text-sm mt-2">Попробовать бота <span style="display:inline-block;transition:transform 0.3s;">→</span></span>
         </a>
         <!-- Card 3 -->
@@ -520,7 +555,7 @@
             <i data-lucide="heart-pulse"></i>
           </div>
           <h3 class="text-xl font-bold font-display text-white">Стоматология</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Демо-бот с записью на приём.</p>
+          <p class="text-slate-400 text-base leading-relaxed">Демо-бот с записью на приём.</p>
           <span class="inline-flex items-center gap-2 text-accent font-semibold text-sm mt-2">Попробовать бота <span style="display:inline-block;transition:transform 0.3s;">→</span></span>
         </a>
         <!-- Card 4 -->
@@ -529,7 +564,7 @@
             <i data-lucide="dumbbell"></i>
           </div>
           <h3 class="text-xl font-bold font-display text-white">Фитнес-тренеры</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Запись на пробную тренировку.</p>
+          <p class="text-slate-400 text-base leading-relaxed">Запись на пробную тренировку.</p>
           <span class="inline-flex items-center gap-2 text-accent font-semibold text-sm mt-2">Попробовать бота <span style="display:inline-block;transition:transform 0.3s;">→</span></span>
         </a>
       </div>
@@ -545,33 +580,33 @@
         <p class="text-slate-400 mt-4 max-w-xl mx-auto">Всё необходимое для автоматизации вашего бизнеса</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="glass p-6 text-center reveal">
+        <div class="glass p-8 text-center reveal">
           <div class="lucide-circle-sm">
             <i data-lucide="smartphone"></i>
           </div>
-          <h3 class="text-lg font-bold font-display text-white mb-2">Визитка в Telegram</h3>
-          <p class="text-slate-400 text-sm">Услуги, цены, форма записи прямо в чате. Клиенты записываются без звонков и ожидания.</p>
+          <h3 class="text-lg font-bold font-display text-white mb-3">Визитка в Telegram</h3>
+          <p class="text-slate-400 text-base">Услуги, цены, форма записи прямо в чате. Клиенты записываются без звонков и ожидания.</p>
         </div>
-        <div class="glass p-6 text-center reveal">
+        <div class="glass p-8 text-center reveal">
           <div class="lucide-circle-sm">
             <i data-lucide="briefcase"></i>
           </div>
-          <h3 class="text-lg font-bold font-display text-white mb-2">Мини-CRM</h3>
-          <p class="text-slate-400 text-sm">Все заявки видны и обрабатываются прямо в Telegram, без сторонних сервисов. Ничего не теряется.</p>
+          <h3 class="text-lg font-bold font-display text-white mb-3">Мини-CRM</h3>
+          <p class="text-slate-400 text-base">Все заявки видны и обрабатываются прямо в Telegram, без сторонних сервисов. Ничего не теряется.</p>
         </div>
-        <div class="glass p-6 text-center reveal">
+        <div class="glass p-8 text-center reveal">
           <div class="lucide-circle-sm">
             <i data-lucide="layout-dashboard"></i>
           </div>
-          <h3 class="text-lg font-bold font-display text-white mb-2">Веб-админка</h3>
-          <p class="text-slate-400 text-sm">Фильтрация заявок по статусу (новая / в работе / завершена), выгрузка в Excel одной кнопкой.</p>
+          <h3 class="text-lg font-bold font-display text-white mb-3">Веб-админка</h3>
+          <p class="text-slate-400 text-base">Фильтрация заявок по статусу (новая / в работе / завершена), выгрузка в Excel одной кнопкой.</p>
         </div>
-        <div class="glass p-6 text-center reveal">
+        <div class="glass p-8 text-center reveal">
           <div class="lucide-circle-sm">
             <i data-lucide="bar-chart-3"></i>
           </div>
-          <h3 class="text-lg font-bold font-display text-white mb-2">Статистика</h3>
-          <p class="text-slate-400 text-sm">Сколько заявок, на каком этапе, конверсия. Принимайте решения на основе данных.</p>
+          <h3 class="text-lg font-bold font-display text-white mb-3">Статистика</h3>
+          <p class="text-slate-400 text-base">Сколько заявок, на каком этапе, конверсия. Принимайте решения на основе данных.</p>
         </div>
       </div>
     </div>
@@ -585,33 +620,33 @@
         <h2 class="text-3xl md:text-5xl font-bold font-display mt-3 text-white">Преимущества работы со мной</h2>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="glass p-6 text-center reveal">
+        <div class="glass p-8 text-center reveal">
           <div class="lucide-circle-sm">
             <i data-lucide="zap"></i>
           </div>
-          <h3 class="text-lg font-bold font-display text-white mb-2">Скорость</h3>
-          <p class="text-slate-400 text-sm">Базовый бот готов за ~2 часа с момента согласования технического задания</p>
+          <h3 class="text-lg font-bold font-display text-white mb-3">Скорость</h3>
+          <p class="text-slate-400 text-base">Базовый бот готов за ~2 часа с момента согласования технического задания</p>
         </div>
-        <div class="glass p-6 text-center reveal">
+        <div class="glass p-8 text-center reveal">
           <div class="lucide-circle-sm">
             <i data-lucide="shield-check"></i>
           </div>
-          <h3 class="text-lg font-bold font-display text-white mb-2">Гарантия 14 дней</h3>
-          <p class="text-slate-400 text-sm">Бесплатно исправляю любые баги в течение двух недель после запуска</p>
+          <h3 class="text-lg font-bold font-display text-white mb-3">Гарантия 14 дней</h3>
+          <p class="text-slate-400 text-base">Бесплатно исправляю любые баги в течение двух недель после запуска</p>
         </div>
-        <div class="glass p-6 text-center reveal">
+        <div class="glass p-8 text-center reveal">
           <div class="lucide-circle-sm">
             <i data-lucide="file-check"></i>
           </div>
-          <h3 class="text-lg font-bold font-display text-white mb-2">Легально</h3>
-          <p class="text-slate-400 text-sm">Самозанятый, работаю по договору, выдаю чеки через «Мой налог»</p>
+          <h3 class="text-lg font-bold font-display text-white mb-3">Легально</h3>
+          <p class="text-slate-400 text-base">Самозанятый, работаю по договору, выдаю чеки через «Мой налог»</p>
         </div>
-        <div class="glass p-6 text-center reveal">
+        <div class="glass p-8 text-center reveal">
           <div class="lucide-circle-sm">
             <i data-lucide="headphones"></i>
           </div>
-          <h3 class="text-lg font-bold font-display text-white mb-2">Поддержка 24/7</h3>
-          <p class="text-slate-400 text-sm">Мониторинг, бэкапы и срочные правки — бот работает без перебоев</p>
+          <h3 class="text-lg font-bold font-display text-white mb-3">Поддержка 24/7</h3>
+          <p class="text-slate-400 text-base">Мониторинг, бэкапы и срочные правки — бот работает без перебоев</p>
         </div>
       </div>
     </div>
@@ -627,11 +662,11 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         <!-- Card 1 -->
-        <div class="glass p-8 flex flex-col reveal">
+        <div class="glass p-6 flex flex-col reveal">
           <h3 class="text-xl font-bold font-display text-white mb-1">Визитка</h3>
-          <div class="text-4xl font-extrabold text-gradient mb-1">15 000 ₽</div>
-          <p class="text-slate-500 text-sm mb-6">до 5 дней</p>
-          <ul class="flex-1 space-y-3 mb-6">
+          <div class="text-3xl font-extrabold text-gradient mb-1">15 000 ₽</div>
+          <p class="text-slate-500 text-sm mb-5">до 5 дней</p>
+          <ul class="flex-1 space-y-2.5 mb-5">
             <li class="flex items-start gap-3 text-sm text-slate-300">
               <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
               Базовая версия
@@ -652,12 +687,12 @@
           <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener" class="btn-gradient text-center no-underline" style="padding:12px 24px; font-size:0.9rem;"><span>Заказать</span></a>
         </div>
         <!-- Card 2 (Featured) -->
-        <div class="pricing-featured glass p-8 flex flex-col reveal" style="transform: scale(1.03);">
+        <div class="pricing-featured glass p-6 flex flex-col reveal" style="transform: scale(1.03);">
           <div class="bg-accent text-white text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full inline-block self-start mb-3">Популярный выбор</div>
           <h3 class="text-xl font-bold font-display text-white mb-1">Запись</h3>
-          <div class="text-4xl font-extrabold text-gradient mb-1">30 000 ₽</div>
-          <p class="text-slate-500 text-sm mb-6">до 10 дней</p>
-          <ul class="flex-1 space-y-3 mb-6">
+          <div class="text-3xl font-extrabold text-gradient mb-1">30 000 ₽</div>
+          <p class="text-slate-500 text-sm mb-5">до 10 дней</p>
+          <ul class="flex-1 space-y-2.5 mb-5">
             <li class="flex items-start gap-3 text-sm text-slate-300">
               <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
               Всё из тарифа «Визитка»
@@ -682,11 +717,11 @@
           <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener" class="btn-gradient text-center no-underline" style="padding:12px 24px; font-size:0.9rem;"><span>Заказать</span></a>
         </div>
         <!-- Card 3 -->
-        <div class="glass p-8 flex flex-col reveal">
+        <div class="glass p-6 flex flex-col reveal">
           <h3 class="text-xl font-bold font-display text-white mb-1">Под ключ</h3>
-          <div class="text-4xl font-extrabold text-gradient mb-1">50 000 ₽</div>
-          <p class="text-slate-500 text-sm mb-6">до 20 дней</p>
-          <ul class="flex-1 space-y-3 mb-6">
+          <div class="text-3xl font-extrabold text-gradient mb-1">50 000 ₽</div>
+          <p class="text-slate-500 text-sm mb-5">до 20 дней</p>
+          <ul class="flex-1 space-y-2.5 mb-5">
             <li class="flex items-start gap-3 text-sm text-slate-300">
               <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
               Всё из «Запись»
@@ -731,19 +766,19 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
         <div class="glass p-5 flex items-center gap-3 reveal">
           <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-          <span class="text-sm text-slate-300">Устранены уязвимости SSRF</span>
+          <span class="text-base text-slate-300">Устранены уязвимости SSRF</span>
         </div>
         <div class="glass p-5 flex items-center gap-3 reveal">
           <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-          <span class="text-sm text-slate-300">Нет утечки данных между пользователями</span>
+          <span class="text-base text-slate-300">Нет утечки данных между пользователями</span>
         </div>
         <div class="glass p-5 flex items-center gap-3 reveal">
           <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-          <span class="text-sm text-slate-300">Безопасное хранение секретов</span>
+          <span class="text-base text-slate-300">Безопасное хранение секретов</span>
         </div>
         <div class="glass p-5 flex items-center gap-3 reveal">
           <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-          <span class="text-sm text-slate-300">Защита от SQL-инъекций</span>
+          <span class="text-base text-slate-300">Защита от SQL-инъекций</span>
         </div>
       </div>
     </div>
@@ -752,7 +787,7 @@
   <!-- CTA Section -->
   <section class="cta-section section-py relative" style="background: #0f172a;">
     <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-      <h2 class="text-3xl md:text-5xl font-bold font-display text-white mb-6 reveal">Смотрите демо → Пишите в Telegram → Получаете бота под вашу нишу за несколько дней</h2>
+      <h2 class="text-2xl md:text-4xl font-bold font-display text-white mb-6 reveal leading-snug">Смотрите демо → Пишите в Telegram →<br>Получаете бота под вашу нишу за несколько дней</h2>
       <p class="text-lg text-slate-400 mb-10 max-w-xl mx-auto reveal">Напишите мне в Telegram — обсудим задачу, сроки и стоимость. Первая консультация бесплатно.</p>
       <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener" class="btn-gradient no-underline reveal" style="padding:20px 48px; font-size:1.1rem;"><span>Обсудить проект</span></a>
     </div>
