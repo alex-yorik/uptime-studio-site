@@ -3,14 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Telegram-боты для записи клиентов под вашу нишу за 3-5 дней. Мини-CRM, веб-админка, экспорт в Excel. Работает в стоматологии, beauty, фитнесе, образовании.">
+  <meta name="theme-color" content="#0a1322">
+  <link rel="canonical" href="https://uptimestudio.ru/">
   <title>Uptime Studio — Telegram-боты для бизнеса</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://uptimestudio.ru/">
+  <meta property="og:title" content="Uptime Studio — Telegram-боты для записи клиентов">
+  <meta property="og:description" content="Готовая платформа под вашу нишу за 3-5 дней. Мини-CRM и веб-админка в комплекте.">
+  <meta property="og:image" content="https://uptimestudio.ru/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Uptime Studio — Telegram-боты для записи клиентов">
+  <meta name="twitter:description" content="Готовая платформа под вашу нишу за 3-5 дней.">
+  <meta name="twitter:image" content="https://uptimestudio.ru/og-image.png">
 
   <!-- Fonts -->
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com" defer></script>
   <script>
     tailwind.config = {
       theme: {
@@ -29,15 +43,16 @@
     }
   </script>
 
+<noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js" defer></script>
 
   <!-- GSAP + ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 
   <!-- Three.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 
   <style>
     :root {
@@ -451,6 +466,20 @@
       z-index: 1;
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
     @media (max-width: 768px) {
       .header { padding: 12px 16px; }
       .section-py { padding: 96px 0; }
@@ -490,9 +519,9 @@
         <a href="#portfolio" class="nav-link">Портфолио</a>
         <a href="#pricing" class="nav-link">Тарифы</a>
         <a href="#contacts" class="nav-link">Контакты</a>
-        <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener" class="btn-gradient ml-4 no-underline" style="padding:10px 24px; font-size:0.9rem;"><span>Написать в Telegram</span></a>
+        <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener noreferrer" class="btn-gradient ml-4 no-underline" style="padding:10px 24px; font-size:0.9rem;"><span>Написать в Telegram</span></a>
       </nav>
-      <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener" class="md:hidden btn-gradient no-underline" style="padding:10px 20px; font-size:0.85rem;"><span>Telegram</span></a>
+      <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener noreferrer" class="md:hidden btn-gradient no-underline" style="padding:10px 20px; font-size:0.85rem;"><span>Telegram</span></a>
     </div>
   </header>
 
@@ -510,13 +539,13 @@
         Telegram-боты для записи клиентов
       </h1>
       <p class="text-xl md:text-2xl text-slate-300 mb-6 max-w-2xl mx-auto reveal" style="animation-delay:0.2s;">
-        Готовая платформа под вашу нишу за 3-5 дней
+        Готовая платформа: запуск под вашу нишу за 3-5 дней
       </p>
       <p class="text-base md:text-lg text-slate-400 max-w-2xl mx-auto reveal" style="animation-delay:0.3s;">
         Не пишем с нуля — адаптируем проверенное решение под ваш бизнес. Уже работает в стоматологии, beauty-сфере, фитнесе и образовании.
       </p>
       <div class="cta-buttons reveal" style="animation-delay:0.4s;">
-        <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener" class="btn-gradient no-underline"><span>Обсудить проект</span></a>
+        <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener noreferrer" class="btn-gradient no-underline"><span>Обсудить проект</span></a>
         <a href="#portfolio" class="btn-outline no-underline">Смотреть демо</a>
       </div>
     </div>
@@ -532,7 +561,7 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Card 1 -->
-        <a href="https://t.me/demo_beauty_nail_bot" target="_blank" rel="noopener" class="no-underline glass p-8 flex flex-col items-start gap-4 reveal cursor-pointer" style="display:block;">
+        <a href="https://t.me/demo_beauty_nail_bot" target="_blank" rel="noopener noreferrer" class="no-underline glass p-8 flex flex-col items-start gap-4 reveal cursor-pointer" style="display:block;">
           <div class="lucide-circle">
             <i data-lucide="sparkles"></i>
           </div>
@@ -541,7 +570,7 @@
           <span class="inline-flex items-center gap-2 text-accent font-semibold text-sm mt-2">Попробовать бота <span style="display:inline-block;transition:transform 0.3s;">→</span></span>
         </a>
         <!-- Card 2 -->
-        <a href="https://t.me/test_teacher_2026_bot" target="_blank" rel="noopener" class="no-underline glass p-8 flex flex-col items-start gap-4 reveal cursor-pointer" style="display:block;">
+        <a href="https://t.me/test_teacher_2026_bot" target="_blank" rel="noopener noreferrer" class="no-underline glass p-8 flex flex-col items-start gap-4 reveal cursor-pointer" style="display:block;">
           <div class="lucide-circle">
             <i data-lucide="graduation-cap"></i>
           </div>
@@ -550,7 +579,7 @@
           <span class="inline-flex items-center gap-2 text-accent font-semibold text-sm mt-2">Попробовать бота <span style="display:inline-block;transition:transform 0.3s;">→</span></span>
         </a>
         <!-- Card 3 -->
-        <a href="https://t.me/Demo_uptime_dantist_bot" target="_blank" rel="noopener" class="no-underline glass p-8 flex flex-col items-start gap-4 reveal cursor-pointer" style="display:block;">
+        <a href="https://t.me/Demo_uptime_dantist_bot" target="_blank" rel="noopener noreferrer" class="no-underline glass p-8 flex flex-col items-start gap-4 reveal cursor-pointer" style="display:block;">
           <div class="lucide-circle">
             <i data-lucide="heart-pulse"></i>
           </div>
@@ -559,7 +588,7 @@
           <span class="inline-flex items-center gap-2 text-accent font-semibold text-sm mt-2">Попробовать бота <span style="display:inline-block;transition:transform 0.3s;">→</span></span>
         </a>
         <!-- Card 4 -->
-        <a href="https://t.me/Demo_Fitness_Coach_bot" target="_blank" rel="noopener" class="no-underline glass p-8 flex flex-col items-start gap-4 reveal cursor-pointer" style="display:block;">
+        <a href="https://t.me/Demo_Fitness_Coach_bot" target="_blank" rel="noopener noreferrer" class="no-underline glass p-8 flex flex-col items-start gap-4 reveal cursor-pointer" style="display:block;">
           <div class="lucide-circle">
             <i data-lucide="dumbbell"></i>
           </div>
@@ -617,7 +646,7 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16 reveal">
         <span class="text-sm uppercase tracking-widest text-purple font-semibold">Почему я</span>
-        <h2 class="text-3xl md:text-5xl font-bold font-display mt-3 text-white">Преимущества работы со мной</h2>
+        <h2 class="text-3xl md:text-5xl font-bold font-display mt-3 text-white">Почему выбирают нас</h2>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="glass p-8 text-center reveal">
@@ -639,7 +668,7 @@
             <i data-lucide="file-check"></i>
           </div>
           <h3 class="text-lg font-bold font-display text-white mb-3">Легально</h3>
-          <p class="text-slate-400 text-base">Самозанятый, работаю по договору, выдаю чеки через «Мой налог»</p>
+          <p class="text-slate-400 text-base">Самозанятый по НПД, работаю по договору</p>
         </div>
         <div class="glass p-8 text-center reveal">
           <div class="lucide-circle-sm">
@@ -665,7 +694,7 @@
         <div class="glass p-6 flex flex-col reveal">
           <h3 class="text-xl font-bold font-display text-white mb-1">Визитка</h3>
           <div class="text-3xl font-extrabold text-gradient mb-1">15 000 ₽</div>
-          <p class="text-slate-500 text-sm mb-5">до 5 дней</p>
+          <p class="text-slate-500 text-sm mb-5">запуск за 3-5 дней</p>
           <ul class="flex-1 space-y-2.5 mb-5">
             <li class="flex items-start gap-3 text-sm text-slate-300">
               <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
@@ -684,7 +713,7 @@
               Простые уведомления
             </li>
           </ul>
-          <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener" class="btn-gradient text-center no-underline" style="padding:12px 24px; font-size:0.9rem;"><span>Заказать</span></a>
+          <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener noreferrer" class="btn-gradient text-center no-underline" style="padding:12px 24px; font-size:0.9rem;"><span>Заказать</span></a>
         </div>
         <!-- Card 2 (Featured) -->
         <div class="pricing-featured glass p-6 flex flex-col reveal" style="transform: scale(1.03);">
@@ -714,13 +743,13 @@
               Экспорт списка клиентов
             </li>
           </ul>
-          <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener" class="btn-gradient text-center no-underline" style="padding:12px 24px; font-size:0.9rem;"><span>Заказать</span></a>
+          <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener noreferrer" class="btn-gradient text-center no-underline" style="padding:12px 24px; font-size:0.9rem;"><span>Заказать</span></a>
         </div>
         <!-- Card 3 -->
         <div class="glass p-6 flex flex-col reveal">
           <h3 class="text-xl font-bold font-display text-white mb-1">Под ключ</h3>
           <div class="text-3xl font-extrabold text-gradient mb-1">50 000 ₽</div>
-          <p class="text-slate-500 text-sm mb-5">до 20 дней</p>
+          <p class="text-slate-500 text-sm mb-5">до 20 дней с полной кастомизацией</p>
           <ul class="flex-1 space-y-2.5 mb-5">
             <li class="flex items-start gap-3 text-sm text-slate-300">
               <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
@@ -743,11 +772,11 @@
               Статистика и аналитика
             </li>
           </ul>
-          <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener" class="btn-gradient text-center no-underline" style="padding:12px 24px; font-size:0.9rem;"><span>Заказать</span></a>
+          <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener noreferrer" class="btn-gradient text-center no-underline" style="padding:12px 24px; font-size:0.9rem;"><span>Заказать</span></a>
         </div>
       </div>
       <div class="text-center mt-10 reveal">
-        <p class="text-slate-500 text-sm">Нужен тариф на обслуживание? <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener" class="text-accent hover:underline">Напишите мне</a> — обсудим</p>
+        <p class="text-slate-500 text-sm">Нужен тариф на обслуживание? <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Напишите мне</a> — обсудим</p>
       </div>
     </div>
   </section>
@@ -789,7 +818,7 @@
     <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
       <h2 class="text-2xl md:text-4xl font-bold font-display text-white mb-6 reveal leading-snug">Смотрите демо → Пишите в Telegram →<br>Получаете бота под вашу нишу за несколько дней</h2>
       <p class="text-lg text-slate-400 mb-10 max-w-xl mx-auto reveal">Напишите мне в Telegram — обсудим задачу, сроки и стоимость. Первая консультация бесплатно.</p>
-      <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener" class="btn-gradient no-underline reveal" style="padding:20px 48px; font-size:1.1rem;"><span>Обсудить проект</span></a>
+      <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener noreferrer" class="btn-gradient no-underline reveal" style="padding:20px 48px; font-size:1.1rem;"><span>Обсудить проект</span></a>
     </div>
   </section>
 
@@ -801,18 +830,21 @@
         <p class="text-slate-500 text-sm mt-1">IT Solutions &amp; CRM Integrations</p>
       </div>
       <div class="flex items-center gap-4">
-        <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Telegram</a>
+        <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">Telegram</a>
+        <span class="text-slate-500 text-sm">или напишите на почту:</span>
+        <a href="mailto:hello@uptimestudio.ru" class="text-slate-400 hover:text-white transition-colors text-sm no-underline">hello@uptimestudio.ru</a>
       </div>
       <p class="text-slate-600 text-sm">© 2026 Uptime Studio. Все права защищены.</p>
     </div>
   </footer>
 
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
     // Preloader
     window.addEventListener('load', () => {
       setTimeout(() => {
         document.getElementById('preloader').classList.add('hidden');
-      }, 800);
+      }, 300);
     });
 
     // Custom cursor
@@ -918,20 +950,6 @@
       );
     });
 
-    // Hero title text reveal
-    const heroTitle = document.querySelector('.hero-title-reveal');
-    if (heroTitle) {
-      gsap.fromTo(heroTitle,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1, y: 0,
-          duration: 1,
-          ease: 'power4.out',
-          delay: 0.5,
-        }
-      );
-    }
-
     // Lenis smooth scroll
     const lenisScript = document.createElement('script');
     lenisScript.src = 'https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js';
@@ -951,57 +969,62 @@
       gsap.ticker.lagSmoothing(0);
     };
     document.head.appendChild(lenisScript);
+    });
   </script>
 
-  
-    <!-- Инициализация иконок Lucide -->
+  <!-- Инициализация иконок Lucide -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      if (typeof lucide !== 'undefined') {
-        var svgNS = 'http://www.w3.org/2000/svg';
-        var svgContainer = document.querySelector('#lucide-svg-container');
-        
-        if (!svgContainer) {
-          // Создаем скрытый SVG-контейнер для градиента (это решит проблему с видимостью)
-          svgContainer = document.createElementNS(svgNS, 'svg');
-          svgContainer.id = 'lucide-svg-container';
-          svgContainer.setAttribute('width', '0');
-          svgContainer.setAttribute('height', '0');
-          svgContainer.style.position = 'absolute';
-          
-          var defs = document.createElementNS(svgNS, 'defs');
-          var grad = document.createElementNS(svgNS, 'linearGradient');
-          grad.id = 'lucide-gradient';
-          grad.setAttribute('x1', '0%'); grad.setAttribute('y1', '0%');
-          grad.setAttribute('x2', '100%'); grad.setAttribute('y2', '100%');
-          
-          var s1 = document.createElementNS(svgNS, 'stop');
-          s1.setAttribute('offset', '0%'); s1.setAttribute('stop-color', '#3b82f6');
-          
-          var s2 = document.createElementNS(svgNS, 'stop');
-          s2.setAttribute('offset', '100%'); s2.setAttribute('stop-color', '#8b5cf6');
-          
-          grad.appendChild(s1); 
-          grad.appendChild(s2);
-          defs.appendChild(grad);
-          svgContainer.appendChild(defs);
-          
-          // Вставляем правильный SVG контейнер в body
-          document.body.prepend(svgContainer);
+      try {
+        if (typeof lucide !== 'undefined') {
+          var svgNS = 'http://www.w3.org/2000/svg';
+          var svgContainer = document.querySelector('#lucide-svg-container');
+
+          if (!svgContainer) {
+            // Создаем скрытый SVG-контейнер для градиента (это решит проблему с видимостью)
+            svgContainer = document.createElementNS(svgNS, 'svg');
+            svgContainer.id = 'lucide-svg-container';
+            svgContainer.setAttribute('width', '0');
+            svgContainer.setAttribute('height', '0');
+            svgContainer.style.position = 'absolute';
+
+            var defs = document.createElementNS(svgNS, 'defs');
+            var grad = document.createElementNS(svgNS, 'linearGradient');
+            grad.id = 'lucide-gradient';
+            grad.setAttribute('x1', '0%'); grad.setAttribute('y1', '0%');
+            grad.setAttribute('x2', '100%'); grad.setAttribute('y2', '100%');
+
+            var s1 = document.createElementNS(svgNS, 'stop');
+            s1.setAttribute('offset', '0%'); s1.setAttribute('stop-color', '#3b82f6');
+
+            var s2 = document.createElementNS(svgNS, 'stop');
+            s2.setAttribute('offset', '100%'); s2.setAttribute('stop-color', '#8b5cf6');
+
+            grad.appendChild(s1);
+            grad.appendChild(s2);
+            defs.appendChild(grad);
+            svgContainer.appendChild(defs);
+
+            // Вставляем правильный SVG контейнер в body
+            document.body.prepend(svgContainer);
+          }
+
+          // Отрисовка иконок
+          lucide.createIcons({ strokeWidth: 1.5 });
+
+          // Применяем градиент к иконкам
+          setTimeout(function() {
+            document.querySelectorAll('.lucide-circle svg, .lucide-circle-lg svg, .lucide-circle-sm svg').forEach(function(svg) {
+              svg.setAttribute('stroke', 'url(#lucide-gradient)');
+            });
+          }, 50);
         }
-
-        // Отрисовка иконок
-        lucide.createIcons({ strokeWidth: 1.5 });
-
-        // Применяем градиент к иконкам
-        setTimeout(function() {
-          document.querySelectorAll('.lucide-circle svg, .lucide-circle-lg svg, .lucide-circle-sm svg').forEach(function(svg) {
-            svg.setAttribute('stroke', 'url(#lucide-gradient)');
-          });
-        }, 50);
+      } catch (error) {
+        console.error('Lucid icon initialization failed:', error);
       }
     });
   </script>
+
 
 
 </body>
