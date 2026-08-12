@@ -498,6 +498,66 @@
         width: 100%;
       }
     }
+
+    /* FAQ accordion */
+    .faq-item {
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .faq-item:hover {
+      border-color: rgba(59,130,246,0.4);
+      box-shadow: 0 0 30px rgba(59,130,246,0.1);
+    }
+    .faq-item.open {
+      border-color: rgba(59,130,246,0.5);
+    }
+    .faq-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 600;
+      font-family: inherit;
+    }
+    .faq-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.4s, background 0.3s, border-color 0.3s;
+      color: var(--accent);
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      border-color: var(--accent);
+      background: rgba(59,130,246,0.1);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .faq-answer p {
+      padding: 0 24px 20px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
   </style>
 
   <!-- Yandex.Metrica counter -->
@@ -517,6 +577,97 @@
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/111532856" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Yandex.Metrica counter -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Uptime Studio",
+    "description": "Telegram-боты для записи клиентов. Готовая платформа под вашу нишу за 3-5 дней.",
+    "url": "https://uptimestudio.ru",
+    "logo": "https://uptimestudio.ru/logo.png",
+    "priceRange": "15000-50000 RUB",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "RU"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Визитка",
+        "price": "15000",
+        "priceCurrency": "RUB",
+        "description": "Базовая версия: услуги, цены, форма записи"
+      },
+      {
+        "@type": "Offer",
+        "name": "Запись",
+        "price": "30000",
+        "priceCurrency": "RUB",
+        "description": "Всё из Визитки + мини-CRM в Telegram"
+      },
+      {
+        "@type": "Offer",
+        "name": "Под ключ",
+        "price": "50000",
+        "priceCurrency": "RUB",
+        "description": "Веб-админка, Excel-экспорт, кастомизация под бренд"
+      }
+    ],
+    "sameAs": [
+      "https://t.me/alex_yanakov"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Сколько времени занимает создание бота?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Базовый бот готов за 3-5 дней. Сложные проекты с веб-админкой — до 20 дней."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Нужны ли технические знания для управления ботом?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Нет. Все заявки приходят в Telegram, управление через простой интерфейс."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Что если мне не понравится результат?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Даём гарантию 14 дней — бесплатно исправляем любые баги."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Работаете ли вы с моей нишей?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "У нас готовы решения для стоматологии, beauty-сферы, фитнеса и образования. Если вашей ниши нет — адаптируем за 2-3 дня."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Как происходит оплата?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Работаю как самозанятый по договору. Оплата поэтапная: 50% предоплата, 50% после запуска."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="font-body">
 
@@ -833,6 +984,54 @@
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section id="faq" class="section-py relative" style="background: #1a2332;">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <span class="text-sm uppercase tracking-widest text-cyan font-semibold">FAQ</span>
+        <h2 class="text-3xl md:text-5xl font-bold font-display mt-3 text-white">Частые вопросы</h2>
+        <p class="text-slate-400 mt-4 max-w-xl mx-auto">Ответы на вопросы, которые задают перед стартом</p>
+      </div>
+      <div class="space-y-4">
+        <div class="faq-item reveal">
+          <button class="faq-btn" type="button">
+            <span>Сколько времени занимает создание бота?</span>
+            <span class="faq-icon"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="faq-answer"><p>Базовый бот готов за 3-5 дней. Сложные проекты с веб-админкой — до 20 дней.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-btn" type="button">
+            <span>Нужны ли технические знания для управления ботом?</span>
+            <span class="faq-icon"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="faq-answer"><p>Нет. Все заявки приходят в Telegram, управление через простой интерфейс.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-btn" type="button">
+            <span>Что если мне не понравится результат?</span>
+            <span class="faq-icon"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="faq-answer"><p>Даём гарантию 14 дней — бесплатно исправляем любые баги.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-btn" type="button">
+            <span>Работаете ли вы с моей нишей?</span>
+            <span class="faq-icon"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="faq-answer"><p>У нас готовы решения для стоматологии, beauty-сферы, фитнеса и образования. Если вашей ниши нет — адаптируем за 2-3 дня.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-btn" type="button">
+            <span>Как происходит оплата?</span>
+            <span class="faq-icon"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="faq-answer"><p>Работаю как самозанятый по договору. Оплата поэтапная: 50% предоплата, 50% после запуска.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Section -->
   <section class="cta-section section-py relative" style="background: #0f172a;">
     <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
@@ -968,6 +1167,23 @@
           }
         }
       );
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const btn = item.querySelector('.faq-btn');
+      const answer = item.querySelector('.faq-answer');
+      btn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(openItem => {
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-answer').style.maxHeight = null;
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
     });
 
     // Lenis smooth scroll
