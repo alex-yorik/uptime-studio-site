@@ -558,6 +558,39 @@
       color: var(--text-muted);
       line-height: 1.7;
     }
+
+    /* Blog preview */
+    .blog-preview {
+      padding: 120px 0;
+    }
+    .article-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .article-link:hover {
+      transform: translateY(-6px);
+    }
+    .article-link .article-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .article-link h3 {
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .article-link .article-excerpt {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .article-link:hover h3 {
+      background: linear-gradient(135deg, var(--accent), var(--purple), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
   </style>
 
   <!-- Yandex.Metrica counter -->
@@ -690,6 +723,7 @@
         <a href="#portfolio" class="nav-link">Портфолио</a>
         <a href="#pricing" class="nav-link">Тарифы</a>
         <a href="#contacts" class="nav-link">Контакты</a>
+        <a href="/blog/telegram-bot-40-percent.html" class="nav-link">Блог</a>
         <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener noreferrer" class="btn-gradient ml-4 no-underline" style="padding:10px 24px; font-size:0.9rem;"><span>Написать в Telegram</span></a>
       </nav>
       <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener noreferrer" class="md:hidden btn-gradient no-underline" style="padding:10px 20px; font-size:0.85rem;"><span>Telegram</span></a>
@@ -1038,6 +1072,19 @@
       <h2 class="text-2xl md:text-4xl font-bold font-display text-white mb-6 reveal leading-snug">Смотрите демо → Пишите в Telegram →<br>Получаете бота под вашу нишу за несколько дней</h2>
       <p class="text-lg text-slate-400 mb-10 max-w-xl mx-auto reveal">Напишите мне в Telegram — обсудим задачу, сроки и стоимость. Первая консультация бесплатно.</p>
       <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener noreferrer" class="btn-gradient no-underline reveal" style="padding:20px 48px; font-size:1.1rem;"><span>Обсудить проект</span></a>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog-preview relative" style="background: #0f172a;">
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+      <h2 class="text-2xl md:text-4xl font-bold font-display text-white mb-2 reveal">Блог</h2>
+      <p class="text-slate-400 mb-12 reveal">Полезные статьи об автоматизации бизнеса</p>
+      <a href="/blog/telegram-bot-40-percent.html" class="article-link glass p-8 reveal">
+        <div class="article-meta">Блог · 12 августа 2026 · 7 минут чтения</div>
+        <h3 class="text-xl md:text-2xl font-bold font-display">Как Telegram-бот увеличивает запись клиентов на 40-45%</h3>
+        <p class="article-excerpt">Реальные цифры и кейсы из стоматологии, beauty и фитнеса</p>
+      </a>
     </div>
   </section>
 
