@@ -94,12 +94,16 @@
     }
     h2 {
       font-size: clamp(24px, 3.5vw, 32px);
-      line-height: 1.2;
+      font-weight: 600;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
       margin: 48px 0 16px;
     }
     h3 {
       font-size: clamp(20px, 2.8vw, 24px);
-      line-height: 1.25;
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
       margin: 32px 0 12px;
     }
     p { margin: 0 0 16px; }
@@ -385,7 +389,14 @@
       -webkit-backdrop-filter: blur(20px);
     }
     .cta h2 { margin-top: 0; }
-    .cta .btn-gradient { margin: 0 8px 8px; }
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-top: 8px;
+    }
 
     /* Footer */
     .footer {
@@ -723,8 +734,10 @@
         <div class="cta">
           <h2>Готовы автоматизировать запись с помощью Telegram-бота?</h2>
           <p>Попробуйте демо-бота для вашей ниши или обсудите проект с нами — ответим быстро, без официоза.</p>
-          <a href="/" class="btn-gradient"><span>Обсудить проект</span></a>
-          <a href="https://t.me/demo_beauty_nail_bot" target="_blank" rel="noopener noreferrer" class="btn-outline">Попробовать демо</a>
+          <div class="cta-buttons">
+            <a href="/" class="btn-gradient"><span>Обсудить проект</span></a>
+            <a href="https://t.me/demo_beauty_nail_bot" target="_blank" rel="noopener noreferrer" class="btn-outline">Попробовать демо</a>
+          </div>
         </div>
       </section>
     </article>
