@@ -601,36 +601,161 @@
     }
 
     /* Blog preview */
-    .blog-preview {
-      padding: 120px 0;
+    .blog-preview-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #0a1322 0%, #0f172a 100%);
     }
-    .article-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.3s, box-shadow 0.3s;
+
+    .section-label {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #3b82f6;
+      margin-bottom: 16px;
+      text-align: center;
     }
-    .article-link:hover {
-      transform: translateY(-6px);
-    }
-    .article-link .article-meta {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-    }
-    .article-link h3 {
-      color: var(--text);
-      margin-bottom: 10px;
-    }
-    .article-link .article-excerpt {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-    .article-link:hover h3 {
-      background: linear-gradient(135deg, var(--accent), var(--purple), var(--cyan));
+
+    .section-title {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: center;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+    }
+
+    .section-subtitle {
+      font-size: 18px;
+      color: #94a3b8;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 48px;
+    }
+
+    .blog-articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .blog-article-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .blog-article-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .blog-article-card.coming-soon {
+      opacity: 0.7;
+      border-style: dashed;
+    }
+
+    .article-category {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #3b82f6;
+      margin-bottom: 12px;
+    }
+
+    .article-title {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+
+    .article-title a {
+      color: #e2e8f0;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .article-title a:hover {
+      color: #3b82f6;
+    }
+
+    .article-excerpt {
+      font-size: 15px;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    .article-date, .article-read-time {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .article-placeholder {
+      font-size: 14px;
+      color: #64748b;
+      font-style: italic;
+    }
+
+    .article-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #3b82f6;
+      font-weight: 600;
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+
+    .article-link:hover {
+      gap: 12px;
+    }
+
+    .article-link .arrow {
+      transition: transform 0.2s;
+    }
+
+    .article-link:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    .blog-all-link {
+      text-align: center;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .blog-preview-section {
+        padding: 60px 0;
+      }
+
+      .blog-articles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .blog-article-card {
+        padding: 24px;
+      }
     }
   </style>
 
@@ -1153,15 +1278,62 @@
   </section>
 
   <!-- Blog Section -->
-  <section class="blog-preview relative" style="background: #0f172a;">
-    <div class="max-w-4xl mx-auto px-6 relative z-10">
-      <h2 class="text-2xl md:text-4xl font-bold font-display text-white mb-2 reveal">Блог</h2>
-      <p class="text-slate-400 mb-12 reveal">Полезные статьи об автоматизации бизнеса</p>
-      <a href="/blog/telegram-bot-40-percent.html" class="article-link glass p-8 reveal">
-        <div class="article-meta">Блог · 12 августа 2026 · 7 минут чтения</div>
-        <h3 class="text-xl md:text-2xl font-bold font-display">Как Telegram-бот увеличивает запись клиентов на 40-45%</h3>
-        <p class="article-excerpt">Реальные цифры и кейсы из стоматологии, beauty и фитнеса</p>
-      </a>
+  <section class="blog-preview-section relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="section-label">БЛОГ</div>
+      <h2 class="section-title">Полезные статьи об автоматизации бизнеса</h2>
+      <p class="section-subtitle">Читают владельцы малого бизнеса: стоматологии, салоны красоты, фитнес-клубы</p>
+
+      <div class="blog-articles-grid">
+        <!-- Статья 1 -->
+        <article class="blog-article-card">
+          <div class="article-content">
+            <div class="article-category">Автоматизация записи</div>
+            <h3 class="article-title">
+              <a href="/blog/telegram-bot-40-percent.html">Как Telegram-бот увеличивает запись клиентов на 40-45%</a>
+            </h3>
+            <p class="article-excerpt">
+              Реальные цифры и кейсы из стоматологии, beauty и фитнеса.
+              Почему клиенты уходят и как бот для записи в Telegram решает эту проблему.
+            </p>
+            <div class="article-meta">
+              <span class="article-date">12 августа 2026</span>
+              <span class="article-read-time">7 минут</span>
+            </div>
+            <a href="/blog/telegram-bot-40-percent.html" class="article-link">
+              Читать статью <span class="arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Место для статьи 2 (заглушка) -->
+        <article class="blog-article-card coming-soon">
+          <div class="article-content">
+            <div class="article-category">Скоро</div>
+            <h3 class="article-title">Как стоматологии автоматизировать запись через бота</h3>
+            <p class="article-excerpt">
+              Пошаговый разбор для владельцев клиник: от проблем до готового решения
+            </p>
+            <div class="article-placeholder">Статья готовится</div>
+          </div>
+        </article>
+
+        <!-- Место для статьи 3 (заглушка) -->
+        <article class="blog-article-card coming-soon">
+          <div class="article-content">
+            <div class="article-category">Скоро</div>
+            <h3 class="article-title">Telegram-бот для салона красоты</h3>
+            <p class="article-excerpt">
+              Как мастера маникюра экономят 15 часов в неделю на записи клиентов
+            </p>
+            <div class="article-placeholder">Статья готовится</div>
+          </div>
+        </article>
+      </div>
+
+      <div class="blog-all-link">
+        <a href="/blog" class="btn-outline">Все статьи</a>
+      </div>
     </div>
   </section>
 
