@@ -369,15 +369,24 @@
       text-align: center;
     }
     .feature-icon {
-      font-size: 24px;
       width: 48px;
       height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(59, 130, 246, 0.1);
+      border-radius: 50%;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      transition: all 0.3s ease;
+    }
+    .feature-icon:hover {
+      background: rgba(59, 130, 246, 0.2);
+      border-color: rgba(139, 92, 246, 0.5);
+      transform: scale(1.1);
+    }
+    .feature-icon svg {
+      width: 24px;
+      height: 24px;
     }
     .feature-text {
       font-size: 14px;
@@ -764,6 +773,14 @@
 
   <!-- Hero Section -->
   <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden" style="background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);">
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6"/>
+          <stop offset="100%" style="stop-color:#8b5cf6"/>
+        </linearGradient>
+      </defs>
+    </svg>
     <canvas id="hero-canvas"></canvas>
     <div class="mesh-bg"></div>
     <div class="relative z-10 text-center px-6 md:px-8 max-w-3xl mx-auto">
@@ -787,15 +804,29 @@
       </div>
       <div class="hero-features reveal" style="animation-delay:0.5s;">
         <div class="hero-feature">
-          <div class="feature-icon">⚡</div>
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#icon-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
           <div class="feature-text">Запуск за 3-5 дней</div>
         </div>
         <div class="hero-feature">
-          <div class="feature-icon">🎯</div>
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#icon-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="6"></circle>
+              <circle cx="12" cy="12" r="2"></circle>
+            </svg>
+          </div>
           <div class="feature-text">Готовое решение под нишу</div>
         </div>
         <div class="hero-feature">
-          <div class="feature-icon">💬</div>
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#icon-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
           <div class="feature-text">Поддержка 24/7</div>
         </div>
       </div>
