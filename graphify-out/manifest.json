@@ -1,116 +1,134 @@
 {
   ".opencode/plugins/graphify.js": {
     "mtime": 1786872170.9086583,
-    "seen": 1787283203.918116,
+    "seen": 1787286691.8537781,
     "ast_hash": "3ea725724bc8ebe483c9f13d6aa1124f",
     "semantic_hash": "3ea725724bc8ebe483c9f13d6aa1124f"
   },
   "AGENTS.md": {
     "mtime": 1786872170.9086583,
-    "seen": 1787283203.918121,
+    "seen": 1787286691.8537824,
     "ast_hash": "6a47d64fcc136324ca395065a707ef76",
     "semantic_hash": "6a47d64fcc136324ca395065a707ef76"
   },
   "README.md": {
     "mtime": 1786176034.3862474,
-    "seen": 1787283203.9181254,
+    "seen": 1787286691.8537862,
     "ast_hash": "2ebd5dc65ecaffd6514a7402e1e6e2d8",
     "semantic_hash": "2ebd5dc65ecaffd6514a7402e1e6e2d8"
   },
   "YANDEX_METRICA.md": {
     "mtime": 1786534501.8826275,
-    "seen": 1787283203.918129,
+    "seen": 1787286691.8537903,
     "ast_hash": "ba7c8872bfc03be2ca5ab74748a5a751",
     "semantic_hash": "ba7c8872bfc03be2ca5ab74748a5a751"
   },
   "index.html": {
     "mtime": 1787283161.6912768,
-    "seen": 1787283203.9181397,
+    "seen": 1787286691.853801,
     "ast_hash": "2744615f6130759f368d935d8aa518d7",
     "semantic_hash": ""
   },
   "project/reports/builder_report.md": {
     "mtime": 1786534464.2733195,
-    "seen": 1787283203.9181433,
+    "seen": 1787286691.853804,
     "ast_hash": "e4193cfde7e6f004d2676d170719853a",
     "semantic_hash": "e4193cfde7e6f004d2676d170719853a"
   },
   "robots.txt": {
     "mtime": 1786523031.0144284,
-    "seen": 1787283203.9181507,
+    "seen": 1787286691.8538113,
     "ast_hash": "b09a0f6720a2e6423bdb2fdf4b521e58",
     "semantic_hash": "b09a0f6720a2e6423bdb2fdf4b521e58"
   },
   ".opencode/opencode.json": {
     "mtime": 1787281891.122321,
-    "seen": 1787283203.9181077,
+    "seen": 1787286691.8537676,
     "ast_hash": "7946635c237231b7f27a0834f80fe328",
     "semantic_hash": ""
   },
   "blog/dental-bot.html": {
     "mtime": 1787219989.3928683,
-    "seen": 1787283203.9181328,
+    "seen": 1787286691.8537939,
     "ast_hash": "1569e154f127bddaf57cbcd7380a4759",
     "semantic_hash": ""
   },
   "blog/telegram-bot-40-percent.html": {
     "mtime": 1787036028.5349102,
-    "seen": 1787283203.9181364,
+    "seen": 1787286691.8537974,
     "ast_hash": "2169a53c2dc47fcc3cceb8585aa36da6",
     "semantic_hash": ""
   },
   "apple-touch-icon.png": {
     "mtime": 1787069365.5677073,
-    "seen": 1787283203.9181545,
+    "seen": 1787286691.8538256,
     "ast_hash": "3d276b22d680e2363416f66349e563ba",
     "semantic_hash": ""
   },
   "favicon-96x96.png": {
     "mtime": 1787069365.5677073,
-    "seen": 1787283203.9181643,
+    "seen": 1787286691.8538358,
     "ast_hash": "e491cbfedf04e445d6ab9836a5c4e3cd",
     "semantic_hash": ""
   },
   "web-app-manifest-192x192.png": {
     "mtime": 1787069365.5707073,
-    "seen": 1787283203.9181745,
+    "seen": 1787286691.8538465,
     "ast_hash": "1c4ee2d337397736f17d7e5e3215d821",
     "semantic_hash": ""
   },
   "project/reports/seo_audit_2026-08-21.md": {
     "mtime": 1787283196.323637,
-    "seen": 1787283203.918147,
+    "seen": 1787286691.8538077,
     "ast_hash": "86621d42eeaee25009dbf25bbe7b4cc5",
     "semantic_hash": ""
   },
   "favicon-16x16.png": {
     "mtime": 1787283115.3624518,
-    "seen": 1787283203.9181578,
+    "seen": 1787286691.853829,
     "ast_hash": "f91b865341d023c1858afe0eadaba36e",
     "semantic_hash": ""
   },
   "favicon-32x32.png": {
     "mtime": 1787283115.364452,
-    "seen": 1787283203.918161,
+    "seen": 1787286691.8538322,
     "ast_hash": "d4ede498e03ec2037082b09825e8d076",
     "semantic_hash": ""
   },
   "logo.png": {
     "mtime": 1787283115.3594518,
-    "seen": 1787283203.9181676,
+    "seen": 1787286691.8538399,
     "ast_hash": "564f43c552fba4ab05e73ddd56f80864",
     "semantic_hash": ""
   },
   "og-image.png": {
     "mtime": 1787283115.1454432,
-    "seen": 1787283203.9181712,
+    "seen": 1787286691.853843,
     "ast_hash": "5bde4af81892bf8369613c7cfc50a248",
     "semantic_hash": ""
   },
   "web-app-manifest-512x512.png": {
     "mtime": 1787283115.4774563,
-    "seen": 1787283203.9181778,
+    "seen": 1787286691.8538506,
     "ast_hash": "fd93a8c1c81b3523ff07da3b7ef58d94",
+    "semantic_hash": ""
+  },
+  "skills/README.md": {
+    "mtime": 1787284923.9923155,
+    "seen": 1787286691.853815,
+    "ast_hash": "4ac552dfee58be38fe2f40e51fd809b1",
+    "semantic_hash": ""
+  },
+  "skills/seo-competitive-audit-template.md": {
+    "mtime": 1787284907.4146917,
+    "seen": 1787286691.8538187,
+    "ast_hash": "16c31e98885755610325893f0f046eb6",
+    "semantic_hash": ""
+  },
+  "skills/seo-competitive-audit.md": {
+    "mtime": 1787284894.3281994,
+    "seen": 1787286691.853822,
+    "ast_hash": "931947ab429a773e56c2e5ea82b7837b",
     "semantic_hash": ""
   }
 }

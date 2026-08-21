@@ -34,6 +34,15 @@
 - `seo-competitive-audit-template.md` — шаблон отчёта
 - `examples/seo-audit-example-config.json` — пример конфигурации
 
+**Глобальная установка:** скилл установлен глобально в `~/.config/opencode/skills/seo-competitive-audit/` (как `SKILL.md` вместе с шаблоном и примером конфига) и доступен из любого проекта. При обновлении файлов в `skills/` синхронизируй копию глобально:
+
+```bash
+mkdir -p ~/.config/opencode/skills/seo-competitive-audit/examples
+cp skills/seo-competitive-audit.md ~/.config/opencode/skills/seo-competitive-audit/SKILL.md
+cp skills/seo-competitive-audit-template.md ~/.config/opencode/skills/seo-competitive-audit/
+cp skills/examples/seo-audit-example-config.json ~/.config/opencode/skills/seo-competitive-audit/examples/
+```
+
 ---
 
 ## Как создать новый скилл

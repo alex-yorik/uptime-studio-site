@@ -7,6 +7,31 @@ description: "Use for deep competitive SEO audit of any web page or HTML file: S
 
 Полный конкурентный SEO-аудит страницы: анализ собственного HTML, SERP-исследование топ-N конкурентов через Bright Data MCP, генерация валидной JSON-LD разметки, оптимизация on-page элементов и пошаговый план внедрения.
 
+## ИЗВЛЕЧЕНИЕ ПАРАМЕТРОВ ИЗ ПРОМПТА
+
+Когда пользователь вызывает скилл через `/seo-competitive-audit` и пишет параметры в свободной форме:
+
+1. **page_file** (обязательный): Ищи упоминания файлов (.html, .tsx, .php). Если не указан — спроси пользователя.
+   - Примеры: "главная страница" → index.html, "страница блога" → blog/article.html, "услуги" → services.html
+
+2. **target_keywords** (обязательный): Ищи фразы в кавычках или после слов "ключи", "запросы", "keywords".
+   - Примеры: "Ключи: запрос1, запрос2" → ["запрос1", "запрос2"]
+   - "Целевые запросы: фраза1, фраза2" → ["фраза1", "фраза2"]
+
+3. **geo_region** (опциональный, по умолчанию RU/Moscow): Ищи упоминания городов/стран.
+   - Примеры: "Москва" → RU/Moscow, "Питер" → RU/Saint-Petersburg, "США" → US
+   - Если не указан → используй RU/Moscow
+
+4. **competitor_count** (опциональный, по умолчанию 5): Ищи числа после слов "топ", "конкурентов".
+   - Примеры: "топ-3" → 3, "5 конкурентов" → 5
+   - Если не указан → используй 5
+
+5. **business_type** (опциональный, по умолчанию ProfessionalService): Ищи тип бизнеса.
+   - Примеры: "магазин" → Product, "услуги" → ProfessionalService, "клиника" → MedicalBusiness
+   - Если не указан → используй ProfessionalService
+
+Если какой-то обязательный параметр не найден — спроси пользователя перед началом работы.
+
 ## Входные параметры
 
 Пользователь указывает (по возможности):
@@ -15,7 +40,7 @@ description: "Use for deep competitive SEO audit of any web page or HTML file: S
 |---|---|---|---|
 | `page_file` | string | `index.html`, `blog/dental-bot.html` | ✅ |
 | `target_keywords` | string[] | `["телеграм бот для записи клиентов", "заказать телеграм бота"]` | ✅ |
-| `geo_region` | string | `RU/Moscow`, `US/New York` | ✅ |
+| `geo_region` | string | `RU/Moscow`, `US/New York` | ❌ (по умолч. `RU/Moscow`) |
 | `competitor_count` | int | `3-5` | ❌ (по умолч. 5) |
 | `business_type` | string | `LocalBusiness`, `ProfessionalService`, `Organization` | ❌ (по умолч. `ProfessionalService`) |
 
@@ -185,13 +210,48 @@ Fallback при недоступности Bright Data: открытые/API-п�
 4. Чек-лист «что закоммитить» (не коммить сам).
 5. Приоритеты внедрения: **Неделя 1** (критично: JSON-LD, Title/Description, битые ассеты, гео/семантика), **Неделя 2** (контент-блоки, отзывы, калькулятор, расширение текста).
 
-## Пример вызова
+## ПРИМЕРЫ ВЫЗОВА
+
+### Пример 1: Полный промпт (свободная форма)
+
+```
+/seo-competitive-audit
+
+Проведи аудит страницы blog/dental-bot.html.
+Ключевые запросы: "telegram бот для стоматологии", "автоматизация записи в клинику".
+Регион: Москва и Московская область.
+Покажи топ-5 конкурентов.
+Тип: ProfessionalService.
+```
+
+Парсинг: `page_file=blog/dental-bot.html`, `target_keywords=["telegram бот для стоматологии","автоматизация записи в клинику"]`, `geo_region=RU/Moscow`, `competitor_count=5`, `business_type=ProfessionalService`.
+
+### Пример 2: Минимальный промпт (дефолтные параметры)
+
+```
+/seo-competitive-audit
+
+Аудит главной страницы. Ключи: "заказать телеграм бота".
+```
+
+Парсинг: `page_file=index.html`, `target_keywords=["заказать телеграм бота"]`, `geo_region=RU/Moscow` (дефолт), `competitor_count=5` (дефолт), `business_type=ProfessionalService` (дефолт).
+
+### Пример 3: Магазин / другой тип бизнеса
+
+```
+/seo-competitive-audit
+
+Страница services.html интернет-магазина. Запросы: "купить telegram-бота", "чат-бот для интернет-магазина".
+Регион: США, топ-3 конкурентов.
+```
+
+Парсинг: `page_file=services.html`, `target_keywords=["купить telegram-бота","чат-бот для интернет-магазина"]`, `geo_region=US`, `competitor_count=3`, `business_type=Product` (по роду деятельности).
+
+### Пример 4: Явные параметры через `ключ=значение`
 
 ```
 /seo-competitive-audit page_file=index.html target_keywords=["телеграм бот для записи клиентов","заказать телеграм бота"] geo_region=RU/Moscow competitor_count=5 business_type=ProfessionalService
 ```
-
-Либо в свободной форме: «Сделай конкурентный SEO-аудит страницы blog/dental-bot.html, ключи „телеграм бот для стоматологии“, регион Россия/Москва».
 
 ## Дополнительные требования
 
@@ -200,3 +260,4 @@ Fallback при недоступности Bright Data: открытые/API-п�
 - Не коммить автоматически — жди подтверждения.
 - Не выдумывай контактные данные и отзывы (это санкционный риск Google и нарушение честности).
 - Скилл параметризован: не привязывайся к тематике/структуре — лендинг, блог, магазин, корпоративный сайт обрабатываются одинаково.
+- Скилл предназначен для глобальной установки: копируется в `~/.config/opencode/skills/seo-competitive-audit/` как `SKILL.md` (вместе с шаблоном отчёта и примером конфига), чтобы вызываться из любого проекта.
