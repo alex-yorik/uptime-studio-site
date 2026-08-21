@@ -1,0 +1,907 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "frontend_dependencies",
+        "label": "Frontend CDN Dependencies",
+        "nodes": [
+          "tech_stack_gsap",
+          "tech_stack_threejs",
+          "tech_stack_tailwind"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "index.html"
+      },
+      {
+        "id": "project_documentation",
+        "label": "Project Documentation & Meta",
+        "nodes": [
+          "readme_md",
+          "agents_md",
+          "yandex_metrica_md",
+          "project_reports_builder_report_md"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.8,
+        "source_file": "README.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "GraphifyPlugin()",
+      "file_type": "code",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L12",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "opencode_plugins_graphify_graphifyplugin",
+      "community": 1,
+      "community_name": "graphify.js",
+      "norm_label": "graphifyplugin()"
+    },
+    {
+      "label": "graphify.js",
+      "file_type": "code",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "opencode_plugins_graphify",
+      "community": 1,
+      "community_name": "graphify.js",
+      "norm_label": "graphify.js"
+    },
+    {
+      "label": "IMPORTANT: keep the reminder string free of backticks and $(...) constructs.",
+      "file_type": "rationale",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "opencode_plugins_graphify_rationale_4",
+      "community": 1,
+      "community_name": "graphify.js",
+      "norm_label": "important: keep the reminder string free of backticks and $(...) constructs."
+    },
+    {
+      "label": "opencode.json",
+      "file_type": "code",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "opencode_opencode",
+      "community": 4,
+      "community_name": "brightdata",
+      "norm_label": "opencode.json"
+    },
+    {
+      "label": "enabled",
+      "file_type": "code",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "opencode_opencode_brightdata_enabled",
+      "community": 4,
+      "community_name": "brightdata",
+      "norm_label": "enabled"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "opencode_opencode_brightdata_type",
+      "community": 4,
+      "community_name": "brightdata",
+      "norm_label": "type"
+    },
+    {
+      "label": "url",
+      "file_type": "code",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "opencode_opencode_brightdata_url",
+      "community": 4,
+      "community_name": "brightdata",
+      "norm_label": "url"
+    },
+    {
+      "label": "mcp",
+      "file_type": "code",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "opencode_opencode_mcp",
+      "community": 4,
+      "community_name": "brightdata",
+      "norm_label": "mcp"
+    },
+    {
+      "label": "brightdata",
+      "file_type": "code",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "opencode_opencode_mcp_brightdata",
+      "community": 4,
+      "community_name": "brightdata",
+      "norm_label": "brightdata"
+    },
+    {
+      "label": "plugin",
+      "file_type": "code",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "opencode_opencode_plugin",
+      "community": 4,
+      "community_name": "brightdata",
+      "norm_label": "plugin"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "opencode_opencode_schema",
+      "community": 4,
+      "community_name": "brightdata",
+      "norm_label": "$schema"
+    },
+    {
+      "label": ".opencode/plugins/graphify.js",
+      "file_type": "concept",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "ref_opencode_plugins_graphify_js",
+      "community": 4,
+      "community_name": "brightdata",
+      "norm_label": ".opencode/plugins/graphify.js"
+    },
+    {
+      "label": "seo_audit_2026-08-21.md",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21",
+      "community": 5,
+      "community_name": "SEO-\u0430\u0443\u0434\u0438\u0442 \u0433\u043b\u0430\u0432\u043d\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b uptimestudio.ru \u2014 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 \u0438 \u043f\u043b\u0430\u043d \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "norm_label": "seo_audit_2026-08-21.md"
+    },
+    {
+      "label": "1. \u041e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0442\u0435\u043c\u044b, \u0446\u0435\u043b\u0435\u0432\u044b\u0445 \u043a\u043b\u044e\u0447\u0435\u0439 \u0438 \u0438\u043d\u0442\u0435\u043d\u0442\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_1_\u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435_\u0442\u0435\u043c\u044b_\u0446\u0435\u043b\u0435\u0432\u044b\u0445_\u043a\u043b\u044e\u0447\u0435\u0439_\u0438_\u0438\u043d\u0442\u0435\u043d\u0442\u0430_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b",
+      "community": 5,
+      "community_name": "SEO-\u0430\u0443\u0434\u0438\u0442 \u0433\u043b\u0430\u0432\u043d\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b uptimestudio.ru \u2014 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 \u0438 \u043f\u043b\u0430\u043d \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "norm_label": "1. \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0442\u0435\u043c\u044b, \u0446\u0435\u043b\u0435\u0432\u044b\u0445 \u043a\u043b\u044e\u0447\u0435\u0438 \u0438 \u0438\u043d\u0442\u0435\u043d\u0442\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b"
+    },
+    {
+      "label": "4. \u0421\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0435 \u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u044b \u043a\u043e\u043d\u0442\u0435\u043d\u0442\u0430 (FAQ, \u0446\u0435\u043d\u044b, \u043e\u0442\u0437\u044b\u0432\u044b, \u043a\u0430\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440)",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L101",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_4_\u0441\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0435_\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u044b_\u043a\u043e\u043d\u0442\u0435\u043d\u0442\u0430_faq_\u0446\u0435\u043d\u044b_\u043e\u0442\u0437\u044b\u0432\u044b_\u043a\u0430\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440",
+      "community": 5,
+      "community_name": "SEO-\u0430\u0443\u0434\u0438\u0442 \u0433\u043b\u0430\u0432\u043d\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b uptimestudio.ru \u2014 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 \u0438 \u043f\u043b\u0430\u043d \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "norm_label": "4. \u0441\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0435 \u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u044b \u043a\u043e\u043d\u0442\u0435\u043d\u0442\u0430 (faq, \u0446\u0435\u043d\u044b, \u043e\u0442\u0437\u044b\u0432\u044b, \u043a\u0430\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440)"
+    },
+    {
+      "label": "6. \u0421\u043f\u0438\u0441\u043e\u043a \u043a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0445 SEO-\u0443\u043f\u0443\u0449\u0435\u043d\u0438\u0439 (\u0438\u0442\u043e\u0433)",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L152",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_6_\u0441\u043f\u0438\u0441\u043e\u043a_\u043a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0445_seo_\u0443\u043f\u0443\u0449\u0435\u043d\u0438\u0439_\u0438\u0442\u043e\u0433",
+      "community": 5,
+      "community_name": "SEO-\u0430\u0443\u0434\u0438\u0442 \u0433\u043b\u0430\u0432\u043d\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b uptimestudio.ru \u2014 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 \u0438 \u043f\u043b\u0430\u043d \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "norm_label": "6. \u0441\u043f\u0438\u0441\u043e\u043a \u043a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0445 seo-\u0443\u043f\u0443\u0449\u0435\u043d\u0438\u0438 (\u0438\u0442\u043e\u0433)"
+    },
+    {
+      "label": "7. \u041f\u043e\u0448\u0430\u0433\u043e\u0432\u044b\u0439 \u043f\u043b\u0430\u043d \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L167",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_7_\u043f\u043e\u0448\u0430\u0433\u043e\u0432\u044b\u0439_\u043f\u043b\u0430\u043d_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "community": 5,
+      "community_name": "SEO-\u0430\u0443\u0434\u0438\u0442 \u0433\u043b\u0430\u0432\u043d\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b uptimestudio.ru \u2014 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 \u0438 \u043f\u043b\u0430\u043d \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "norm_label": "7. \u043f\u043e\u0448\u0430\u0433\u043e\u0432\u044b\u0438 \u043f\u043b\u0430\u043d \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f"
+    },
+    {
+      "label": "8. \u0414\u0430\u043d\u043d\u044b\u0435 \u0430\u0443\u0434\u0438\u0442\u0430 (\u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a\u0438)",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L193",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_8_\u0434\u0430\u043d\u043d\u044b\u0435_\u0430\u0443\u0434\u0438\u0442\u0430_\u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a\u0438",
+      "community": 5,
+      "community_name": "SEO-\u0430\u0443\u0434\u0438\u0442 \u0433\u043b\u0430\u0432\u043d\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b uptimestudio.ru \u2014 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 \u0438 \u043f\u043b\u0430\u043d \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "norm_label": "8. \u0434\u0430\u043d\u043d\u044b\u0435 \u0430\u0443\u0434\u0438\u0442\u0430 (\u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a\u0438)"
+    },
+    {
+      "label": "9. \u0421\u0442\u0430\u0442\u0443\u0441 \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f (2026-08-21, \u0432 \u044d\u0442\u043e\u043c \u0436\u0435 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0438)",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L200",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_9_\u0441\u0442\u0430\u0442\u0443\u0441_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f_2026_08_21_\u0432_\u044d\u0442\u043e\u043c_\u0436\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0438",
+      "community": 5,
+      "community_name": "SEO-\u0430\u0443\u0434\u0438\u0442 \u0433\u043b\u0430\u0432\u043d\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b uptimestudio.ru \u2014 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 \u0438 \u043f\u043b\u0430\u043d \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "norm_label": "9. \u0441\u0442\u0430\u0442\u0443\u0441 \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f (2026-08-21, \u0432 \u044d\u0442\u043e\u043c \u0436\u0435 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0438)"
+    },
+    {
+      "label": "SEO-\u0430\u0443\u0434\u0438\u0442 \u0433\u043b\u0430\u0432\u043d\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b uptimestudio.ru \u2014 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 \u0438 \u043f\u043b\u0430\u043d \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_seo_\u0430\u0443\u0434\u0438\u0442_\u0433\u043b\u0430\u0432\u043d\u043e\u0439_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b_uptimestudio_ru_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_\u0438_\u043f\u043b\u0430\u043d_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "community": 5,
+      "community_name": "SEO-\u0430\u0443\u0434\u0438\u0442 \u0433\u043b\u0430\u0432\u043d\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b uptimestudio.ru \u2014 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 \u0438 \u043f\u043b\u0430\u043d \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "norm_label": "seo-\u0430\u0443\u0434\u0438\u0442 \u0433\u043b\u0430\u0432\u043d\u043e\u0438 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b uptimestudio.ru \u2014 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0438 \u0430\u043d\u0430\u043b\u0438\u0437 \u0438 \u043f\u043b\u0430\u043d \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f"
+    },
+    {
+      "label": "2. \u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u043f\u043e\u0438\u0441\u043a\u0430 Google (geo=ru) \u2014 \u0442\u043e\u043f \u043e\u0440\u0433\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0432\u044b\u0434\u0430\u0447\u0438",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_2_\u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b_\u043f\u043e\u0438\u0441\u043a\u0430_google_geo_ru_\u0442\u043e\u043f_\u043e\u0440\u0433\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u0439_\u0432\u044b\u0434\u0430\u0447\u0438",
+      "community": 6,
+      "community_name": "2. \u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u043f\u043e\u0438\u0441\u043a\u0430 Google (geo=ru) \u2014 \u0442\u043e\u043f \u043e\u0440\u0433\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0432\u044b\u0434\u0430\u0447\u0438",
+      "norm_label": "2. \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u043f\u043e\u0438\u0441\u043a\u0430 google (geo=ru) \u2014 \u0442\u043e\u043f \u043e\u0440\u0433\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u0438 \u0432\u044b\u0434\u0430\u0447\u0438"
+    },
+    {
+      "label": "\u0417\u0430\u043f\u0440\u043e\u0441 1: \u00ab\u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c \u0431\u043e\u0442 \u0434\u043b\u044f \u0437\u0430\u043f\u0438\u0441\u0438 \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432\u00bb",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_\u0437\u0430\u043f\u0440\u043e\u0441_1_\u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c_\u0431\u043e\u0442_\u0434\u043b\u044f_\u0437\u0430\u043f\u0438\u0441\u0438_\u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432",
+      "community": 6,
+      "community_name": "2. \u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u043f\u043e\u0438\u0441\u043a\u0430 Google (geo=ru) \u2014 \u0442\u043e\u043f \u043e\u0440\u0433\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0432\u044b\u0434\u0430\u0447\u0438",
+      "norm_label": "\u0437\u0430\u043f\u0440\u043e\u0441 1: \u00ab\u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c \u0431\u043e\u0442 \u0434\u043b\u044f \u0437\u0430\u043f\u0438\u0441\u0438 \u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432\u00bb"
+    },
+    {
+      "label": "\u0417\u0430\u043f\u0440\u043e\u0441 2: \u00ab\u0437\u0430\u043a\u0430\u0437\u0430\u0442\u044c \u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c \u0431\u043e\u0442\u0430 \u0434\u043b\u044f \u0431\u0438\u0437\u043d\u0435\u0441\u0430\u00bb",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_\u0437\u0430\u043f\u0440\u043e\u0441_2_\u0437\u0430\u043a\u0430\u0437\u0430\u0442\u044c_\u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c_\u0431\u043e\u0442\u0430_\u0434\u043b\u044f_\u0431\u0438\u0437\u043d\u0435\u0441\u0430",
+      "community": 6,
+      "community_name": "2. \u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u043f\u043e\u0438\u0441\u043a\u0430 Google (geo=ru) \u2014 \u0442\u043e\u043f \u043e\u0440\u0433\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0432\u044b\u0434\u0430\u0447\u0438",
+      "norm_label": "\u0437\u0430\u043f\u0440\u043e\u0441 2: \u00ab\u0437\u0430\u043a\u0430\u0437\u0430\u0442\u044c \u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c \u0431\u043e\u0442\u0430 \u0434\u043b\u044f \u0431\u0438\u0437\u043d\u0435\u0441\u0430\u00bb"
+    },
+    {
+      "label": "\u0417\u0430\u043f\u0440\u043e\u0441 3: \u00ab\u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c \u0431\u043e\u0442 \u0434\u043b\u044f \u0441\u0442\u043e\u043c\u0430\u0442\u043e\u043b\u043e\u0433\u0438\u0438\u00bb",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_\u0437\u0430\u043f\u0440\u043e\u0441_3_\u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c_\u0431\u043e\u0442_\u0434\u043b\u044f_\u0441\u0442\u043e\u043c\u0430\u0442\u043e\u043b\u043e\u0433\u0438\u0438",
+      "community": 6,
+      "community_name": "2. \u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u043f\u043e\u0438\u0441\u043a\u0430 Google (geo=ru) \u2014 \u0442\u043e\u043f \u043e\u0440\u0433\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0432\u044b\u0434\u0430\u0447\u0438",
+      "norm_label": "\u0437\u0430\u043f\u0440\u043e\u0441 3: \u00ab\u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c \u0431\u043e\u0442 \u0434\u043b\u044f \u0441\u0442\u043e\u043c\u0430\u0442\u043e\u043b\u043e\u0433\u0438\u0438\u00bb"
+    },
+    {
+      "label": "5.1 \u0427\u0442\u043e \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u043e \u0443 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432 (\u043f\u043e \u0441\u043f\u0430\u0440\u0441\u0435\u043d\u043d\u044b\u043c \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430\u043c)",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L120",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_5_1_\u0447\u0442\u043e_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u043e_\u0443_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432_\u043f\u043e_\u0441\u043f\u0430\u0440\u0441\u0435\u043d\u043d\u044b\u043c_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430\u043c",
+      "community": 7,
+      "community_name": "5. \u0410\u0443\u0434\u0438\u0442 JSON-LD Schema: \u0447\u0442\u043e \u0435\u0441\u0442\u044c \u0443 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432 \u0438 \u0447\u0435\u0433\u043e \u043d\u0435\u0442 \u0443 \u043d\u0430\u0441",
+      "norm_label": "5.1 \u0447\u0442\u043e \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u043e \u0443 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432 (\u043f\u043e \u0441\u043f\u0430\u0440\u0441\u0435\u043d\u043d\u044b\u043c \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430\u043c)"
+    },
+    {
+      "label": "5.2 \u0427\u0442\u043e \u0435\u0441\u0442\u044c \u0443 \u043d\u0430\u0441 \u0441\u0435\u0439\u0447\u0430\u0441",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L135",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_5_2_\u0447\u0442\u043e_\u0435\u0441\u0442\u044c_\u0443_\u043d\u0430\u0441_\u0441\u0435\u0439\u0447\u0430\u0441",
+      "community": 7,
+      "community_name": "5. \u0410\u0443\u0434\u0438\u0442 JSON-LD Schema: \u0447\u0442\u043e \u0435\u0441\u0442\u044c \u0443 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432 \u0438 \u0447\u0435\u0433\u043e \u043d\u0435\u0442 \u0443 \u043d\u0430\u0441",
+      "norm_label": "5.2 \u0447\u0442\u043e \u0435\u0441\u0442\u044c \u0443 \u043d\u0430\u0441 \u0441\u0435\u0438\u0447\u0430\u0441"
+    },
+    {
+      "label": "5.3 \u041a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043a\u0438 \u043d\u0430\u0448\u0435\u0439 \u0440\u0430\u0437\u043c\u0435\u0442\u043a\u0438",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L140",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_5_3_\u043a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435_\u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043a\u0438_\u043d\u0430\u0448\u0435\u0439_\u0440\u0430\u0437\u043c\u0435\u0442\u043a\u0438",
+      "community": 7,
+      "community_name": "5. \u0410\u0443\u0434\u0438\u0442 JSON-LD Schema: \u0447\u0442\u043e \u0435\u0441\u0442\u044c \u0443 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432 \u0438 \u0447\u0435\u0433\u043e \u043d\u0435\u0442 \u0443 \u043d\u0430\u0441",
+      "norm_label": "5.3 \u043a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043a\u0438 \u043d\u0430\u0448\u0435\u0438 \u0440\u0430\u0437\u043c\u0435\u0442\u043a\u0438"
+    },
+    {
+      "label": "5. \u0410\u0443\u0434\u0438\u0442 JSON-LD Schema: \u0447\u0442\u043e \u0435\u0441\u0442\u044c \u0443 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432 \u0438 \u0447\u0435\u0433\u043e \u043d\u0435\u0442 \u0443 \u043d\u0430\u0441",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L118",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_5_\u0430\u0443\u0434\u0438\u0442_json_ld_schema_\u0447\u0442\u043e_\u0435\u0441\u0442\u044c_\u0443_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432_\u0438_\u0447\u0435\u0433\u043e_\u043d\u0435\u0442_\u0443_\u043d\u0430\u0441",
+      "community": 7,
+      "community_name": "5. \u0410\u0443\u0434\u0438\u0442 JSON-LD Schema: \u0447\u0442\u043e \u0435\u0441\u0442\u044c \u0443 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432 \u0438 \u0447\u0435\u0433\u043e \u043d\u0435\u0442 \u0443 \u043d\u0430\u0441",
+      "norm_label": "5. \u0430\u0443\u0434\u0438\u0442 json-ld schema: \u0447\u0442\u043e \u0435\u0441\u0442\u044c \u0443 \u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432 \u0438 \u0447\u0435\u0433\u043e \u043d\u0435\u0442 \u0443 \u043d\u0430\u0441"
+    },
+    {
+      "label": "3.1 Title \u0438 Meta Description",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_3_1_title_\u0438_meta_description",
+      "community": 8,
+      "community_name": "3. \u0421\u0440\u0430\u0432\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 Title / Meta / H1\u2013H3 / \u043f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u0438 \u043a\u043b\u044e\u0447\u0435\u0439",
+      "norm_label": "3.1 title \u0438 meta description"
+    },
+    {
+      "label": "3.2 H1\u2013H3 \u0438 \u043f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u044c",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L85",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_3_2_h1_h3_\u0438_\u043f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u044c",
+      "community": 8,
+      "community_name": "3. \u0421\u0440\u0430\u0432\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 Title / Meta / H1\u2013H3 / \u043f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u0438 \u043a\u043b\u044e\u0447\u0435\u0439",
+      "norm_label": "3.2 h1\u2013h3 \u0438 \u043f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u044c"
+    },
+    {
+      "label": "3. \u0421\u0440\u0430\u0432\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 Title / Meta / H1\u2013H3 / \u043f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u0438 \u043a\u043b\u044e\u0447\u0435\u0439",
+      "file_type": "document",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "project_reports_seo_audit_2026_08_21_3_\u0441\u0440\u0430\u0432\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_title_meta_h1_h3_\u043f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u0438_\u043a\u043b\u044e\u0447\u0435\u0439",
+      "community": 8,
+      "community_name": "3. \u0421\u0440\u0430\u0432\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 Title / Meta / H1\u2013H3 / \u043f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u0438 \u043a\u043b\u044e\u0447\u0435\u0439",
+      "norm_label": "3. \u0441\u0440\u0430\u0432\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0438 \u0430\u043d\u0430\u043b\u0438\u0437 title / meta / h1\u2013h3 / \u043f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u0438 \u043a\u043b\u044e\u0447\u0435\u0438"
+    },
+    {
+      "label": "index.html",
+      "file_type": "code",
+      "source_file": "index.html",
+      "rationale": "The main entry point containing markup, styles, and client-side logic.",
+      "community": 0,
+      "norm_label": "index.html",
+      "community_name": "Landing Page Frontend Development",
+      "_origin": "semantic",
+      "id": "index_html"
+    },
+    {
+      "label": "GSAP + ScrollTrigger",
+      "file_type": "concept",
+      "source_file": "index.html",
+      "community": 0,
+      "norm_label": "gsap + scrolltrigger",
+      "community_name": "Landing Page Frontend Development",
+      "_origin": "semantic",
+      "id": "tech_stack_gsap"
+    },
+    {
+      "label": "Tailwind CSS",
+      "file_type": "concept",
+      "source_file": "index.html",
+      "community": 0,
+      "norm_label": "tailwind css",
+      "community_name": "Landing Page Frontend Development",
+      "_origin": "semantic",
+      "id": "tech_stack_tailwind"
+    },
+    {
+      "label": "Three.js",
+      "file_type": "concept",
+      "source_file": "index.html",
+      "community": 0,
+      "norm_label": "three.js",
+      "community_name": "Landing Page Frontend Development",
+      "_origin": "semantic",
+      "id": "tech_stack_threejs"
+    },
+    {
+      "label": "Uptime Studio Landing Page",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "community": 0,
+      "norm_label": "uptime studio landing page",
+      "community_name": "Landing Page Frontend Development",
+      "_origin": "semantic",
+      "id": "uptime_studio_concept"
+    },
+    {
+      "label": "Yandex.Metrica",
+      "file_type": "concept",
+      "source_file": "index.html",
+      "community": 0,
+      "norm_label": "yandex.metrica",
+      "community_name": "Landing Page Frontend Development",
+      "_origin": "semantic",
+      "id": "yandex_metrica_service"
+    },
+    {
+      "label": "Builder Report",
+      "file_type": "document",
+      "source_file": "project/reports/builder_report.md",
+      "rationale": "Status report on project state and technical debt.",
+      "community": 0,
+      "norm_label": "builder report",
+      "community_name": "Landing Page Frontend Development",
+      "_origin": "semantic",
+      "id": "project_reports_builder_report_md"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "rationale": "Provides project overview, tech stack, and architecture details.",
+      "community": 0,
+      "norm_label": "readme.md",
+      "community_name": "Landing Page Frontend Development",
+      "_origin": "semantic",
+      "id": "readme_md"
+    },
+    {
+      "label": "YANDEX_METRICA.md",
+      "file_type": "document",
+      "source_file": "YANDEX_METRICA.md",
+      "rationale": "Instructions for configuring Yandex.Metrica analytics.",
+      "community": 0,
+      "norm_label": "yandex_metrica.md",
+      "community_name": "Landing Page Frontend Development",
+      "_origin": "semantic",
+      "id": "yandex_metrica_md"
+    },
+    {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "rationale": "Defines the rules and workflow for using graphify within the project.",
+      "community": 2,
+      "norm_label": "agents.md",
+      "community_name": "AGENTS.md",
+      "_origin": "semantic",
+      "id": "agents_md"
+    },
+    {
+      "label": "robots.txt",
+      "file_type": "document",
+      "source_file": "robots.txt",
+      "community": 3,
+      "norm_label": "robots.txt",
+      "community_name": "robots.txt",
+      "_origin": "semantic",
+      "id": "robots_txt"
+    }
+  ],
+  "links": [
+    {
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast",
+      "source": "opencode_opencode_plugin",
+      "target": "ref_opencode_plugins_graphify_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "opencode_opencode",
+      "target": "opencode_opencode_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "opencode_opencode",
+      "target": "opencode_opencode_plugin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "opencode_opencode",
+      "target": "opencode_opencode_mcp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "opencode_opencode_mcp",
+      "target": "opencode_opencode_mcp_brightdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "opencode_opencode_mcp_brightdata",
+      "target": "opencode_opencode_brightdata_enabled",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "opencode_opencode_mcp_brightdata",
+      "target": "opencode_opencode_brightdata_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "opencode_opencode_mcp_brightdata",
+      "target": "opencode_opencode_brightdata_url",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "opencode_plugins_graphify",
+      "target": "opencode_plugins_graphify_graphifyplugin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21",
+      "target": "project_reports_seo_audit_2026_08_21_seo_\u0430\u0443\u0434\u0438\u0442_\u0433\u043b\u0430\u0432\u043d\u043e\u0439_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b_uptimestudio_ru_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_\u0438_\u043f\u043b\u0430\u043d_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_2_\u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b_\u043f\u043e\u0438\u0441\u043a\u0430_google_geo_ru_\u0442\u043e\u043f_\u043e\u0440\u0433\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u0439_\u0432\u044b\u0434\u0430\u0447\u0438",
+      "target": "project_reports_seo_audit_2026_08_21_\u0437\u0430\u043f\u0440\u043e\u0441_1_\u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c_\u0431\u043e\u0442_\u0434\u043b\u044f_\u0437\u0430\u043f\u0438\u0441\u0438_\u043a\u043b\u0438\u0435\u043d\u0442\u043e\u0432",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_2_\u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b_\u043f\u043e\u0438\u0441\u043a\u0430_google_geo_ru_\u0442\u043e\u043f_\u043e\u0440\u0433\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u0439_\u0432\u044b\u0434\u0430\u0447\u0438",
+      "target": "project_reports_seo_audit_2026_08_21_\u0437\u0430\u043f\u0440\u043e\u0441_2_\u0437\u0430\u043a\u0430\u0437\u0430\u0442\u044c_\u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c_\u0431\u043e\u0442\u0430_\u0434\u043b\u044f_\u0431\u0438\u0437\u043d\u0435\u0441\u0430",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_2_\u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b_\u043f\u043e\u0438\u0441\u043a\u0430_google_geo_ru_\u0442\u043e\u043f_\u043e\u0440\u0433\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u0439_\u0432\u044b\u0434\u0430\u0447\u0438",
+      "target": "project_reports_seo_audit_2026_08_21_\u0437\u0430\u043f\u0440\u043e\u0441_3_\u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c_\u0431\u043e\u0442_\u0434\u043b\u044f_\u0441\u0442\u043e\u043c\u0430\u0442\u043e\u043b\u043e\u0433\u0438\u0438",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_3_\u0441\u0440\u0430\u0432\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_title_meta_h1_h3_\u043f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u0438_\u043a\u043b\u044e\u0447\u0435\u0439",
+      "target": "project_reports_seo_audit_2026_08_21_3_1_title_\u0438_meta_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_3_\u0441\u0440\u0430\u0432\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_title_meta_h1_h3_\u043f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u0438_\u043a\u043b\u044e\u0447\u0435\u0439",
+      "target": "project_reports_seo_audit_2026_08_21_3_2_h1_h3_\u0438_\u043f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u044c",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_5_\u0430\u0443\u0434\u0438\u0442_json_ld_schema_\u0447\u0442\u043e_\u0435\u0441\u0442\u044c_\u0443_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432_\u0438_\u0447\u0435\u0433\u043e_\u043d\u0435\u0442_\u0443_\u043d\u0430\u0441",
+      "target": "project_reports_seo_audit_2026_08_21_5_1_\u0447\u0442\u043e_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u043e_\u0443_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432_\u043f\u043e_\u0441\u043f\u0430\u0440\u0441\u0435\u043d\u043d\u044b\u043c_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430\u043c",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L135",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_5_\u0430\u0443\u0434\u0438\u0442_json_ld_schema_\u0447\u0442\u043e_\u0435\u0441\u0442\u044c_\u0443_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432_\u0438_\u0447\u0435\u0433\u043e_\u043d\u0435\u0442_\u0443_\u043d\u0430\u0441",
+      "target": "project_reports_seo_audit_2026_08_21_5_2_\u0447\u0442\u043e_\u0435\u0441\u0442\u044c_\u0443_\u043d\u0430\u0441_\u0441\u0435\u0439\u0447\u0430\u0441",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L140",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_5_\u0430\u0443\u0434\u0438\u0442_json_ld_schema_\u0447\u0442\u043e_\u0435\u0441\u0442\u044c_\u0443_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432_\u0438_\u0447\u0435\u0433\u043e_\u043d\u0435\u0442_\u0443_\u043d\u0430\u0441",
+      "target": "project_reports_seo_audit_2026_08_21_5_3_\u043a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435_\u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043a\u0438_\u043d\u0430\u0448\u0435\u0439_\u0440\u0430\u0437\u043c\u0435\u0442\u043a\u0438",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_seo_\u0430\u0443\u0434\u0438\u0442_\u0433\u043b\u0430\u0432\u043d\u043e\u0439_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b_uptimestudio_ru_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_\u0438_\u043f\u043b\u0430\u043d_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "target": "project_reports_seo_audit_2026_08_21_1_\u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435_\u0442\u0435\u043c\u044b_\u0446\u0435\u043b\u0435\u0432\u044b\u0445_\u043a\u043b\u044e\u0447\u0435\u0439_\u0438_\u0438\u043d\u0442\u0435\u043d\u0442\u0430_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_seo_\u0430\u0443\u0434\u0438\u0442_\u0433\u043b\u0430\u0432\u043d\u043e\u0439_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b_uptimestudio_ru_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_\u0438_\u043f\u043b\u0430\u043d_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "target": "project_reports_seo_audit_2026_08_21_4_\u0441\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0435_\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u044b_\u043a\u043e\u043d\u0442\u0435\u043d\u0442\u0430_faq_\u0446\u0435\u043d\u044b_\u043e\u0442\u0437\u044b\u0432\u044b_\u043a\u0430\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_seo_\u0430\u0443\u0434\u0438\u0442_\u0433\u043b\u0430\u0432\u043d\u043e\u0439_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b_uptimestudio_ru_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_\u0438_\u043f\u043b\u0430\u043d_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "target": "project_reports_seo_audit_2026_08_21_5_\u0430\u0443\u0434\u0438\u0442_json_ld_schema_\u0447\u0442\u043e_\u0435\u0441\u0442\u044c_\u0443_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043e\u0432_\u0438_\u0447\u0435\u0433\u043e_\u043d\u0435\u0442_\u0443_\u043d\u0430\u0441",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L152",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_seo_\u0430\u0443\u0434\u0438\u0442_\u0433\u043b\u0430\u0432\u043d\u043e\u0439_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b_uptimestudio_ru_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_\u0438_\u043f\u043b\u0430\u043d_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "target": "project_reports_seo_audit_2026_08_21_6_\u0441\u043f\u0438\u0441\u043e\u043a_\u043a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0445_seo_\u0443\u043f\u0443\u0449\u0435\u043d\u0438\u0439_\u0438\u0442\u043e\u0433",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L167",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_seo_\u0430\u0443\u0434\u0438\u0442_\u0433\u043b\u0430\u0432\u043d\u043e\u0439_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b_uptimestudio_ru_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_\u0438_\u043f\u043b\u0430\u043d_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "target": "project_reports_seo_audit_2026_08_21_7_\u043f\u043e\u0448\u0430\u0433\u043e\u0432\u044b\u0439_\u043f\u043b\u0430\u043d_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L193",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_seo_\u0430\u0443\u0434\u0438\u0442_\u0433\u043b\u0430\u0432\u043d\u043e\u0439_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b_uptimestudio_ru_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_\u0438_\u043f\u043b\u0430\u043d_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "target": "project_reports_seo_audit_2026_08_21_8_\u0434\u0430\u043d\u043d\u044b\u0435_\u0430\u0443\u0434\u0438\u0442\u0430_\u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a\u0438",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L200",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_seo_\u0430\u0443\u0434\u0438\u0442_\u0433\u043b\u0430\u0432\u043d\u043e\u0439_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b_uptimestudio_ru_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_\u0438_\u043f\u043b\u0430\u043d_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "target": "project_reports_seo_audit_2026_08_21_9_\u0441\u0442\u0430\u0442\u0443\u0441_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f_2026_08_21_\u0432_\u044d\u0442\u043e\u043c_\u0436\u0435_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0438",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_seo_\u0430\u0443\u0434\u0438\u0442_\u0433\u043b\u0430\u0432\u043d\u043e\u0439_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b_uptimestudio_ru_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_\u0438_\u043f\u043b\u0430\u043d_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "target": "project_reports_seo_audit_2026_08_21_2_\u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b_\u043f\u043e\u0438\u0441\u043a\u0430_google_geo_ru_\u0442\u043e\u043f_\u043e\u0440\u0433\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u0439_\u0432\u044b\u0434\u0430\u0447\u0438",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "project/reports/seo_audit_2026-08-21.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "project_reports_seo_audit_2026_08_21_seo_\u0430\u0443\u0434\u0438\u0442_\u0433\u043b\u0430\u0432\u043d\u043e\u0439_\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b_uptimestudio_ru_\u043a\u043e\u043d\u043a\u0443\u0440\u0435\u043d\u0442\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_\u0438_\u043f\u043b\u0430\u043d_\u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u044f",
+      "target": "project_reports_seo_audit_2026_08_21_3_\u0441\u0440\u0430\u0432\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439_\u0430\u043d\u0430\u043b\u0438\u0437_title_meta_h1_h3_\u043f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u0438_\u043a\u043b\u044e\u0447\u0435\u0439",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "opencode_plugins_graphify_rationale_4",
+      "target": "opencode_plugins_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "_origin": "semantic",
+      "source": "index_html",
+      "target": "yandex_metrica_service"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "_origin": "semantic",
+      "source": "index_html",
+      "target": "tech_stack_gsap"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "_origin": "semantic",
+      "source": "index_html",
+      "target": "tech_stack_tailwind"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "_origin": "semantic",
+      "source": "index_html",
+      "target": "tech_stack_threejs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "project/reports/builder_report.md",
+      "_origin": "semantic",
+      "source": "project_reports_builder_report_md",
+      "target": "index_html"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "_origin": "semantic",
+      "source": "readme_md",
+      "target": "index_html"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "YANDEX_METRICA.md",
+      "_origin": "semantic",
+      "source": "yandex_metrica_md",
+      "target": "index_html"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "index.html",
+      "_origin": "semantic",
+      "source": "index_html",
+      "target": "uptime_studio_concept"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "frontend_dependencies",
+      "label": "Frontend CDN Dependencies",
+      "nodes": [
+        "tech_stack_gsap",
+        "tech_stack_threejs",
+        "tech_stack_tailwind"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html"
+    },
+    {
+      "id": "project_documentation",
+      "label": "Project Documentation & Meta",
+      "nodes": [
+        "readme_md",
+        "agents_md",
+        "yandex_metrica_md",
+        "project_reports_builder_report_md"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "README.md"
+    }
+  ],
+  "built_at_commit": "09a8024b5a44b0eb6cf910604f2a31c4909b6c16"
+}

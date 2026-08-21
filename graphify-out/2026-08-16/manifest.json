@@ -1,0 +1,44 @@
+{
+  ".opencode/plugins/graphify.js": {
+    "mtime": 1786872170.9086583,
+    "seen": 1786872182.3941553,
+    "ast_hash": "3ea725724bc8ebe483c9f13d6aa1124f",
+    "semantic_hash": "3ea725724bc8ebe483c9f13d6aa1124f"
+  },
+  "AGENTS.md": {
+    "mtime": 1786872170.9086583,
+    "seen": 1786872182.3941636,
+    "ast_hash": "6a47d64fcc136324ca395065a707ef76",
+    "semantic_hash": "6a47d64fcc136324ca395065a707ef76"
+  },
+  "README.md": {
+    "mtime": 1786176034.3862474,
+    "seen": 1786872182.3941689,
+    "ast_hash": "2ebd5dc65ecaffd6514a7402e1e6e2d8",
+    "semantic_hash": "2ebd5dc65ecaffd6514a7402e1e6e2d8"
+  },
+  "YANDEX_METRICA.md": {
+    "mtime": 1786534501.8826275,
+    "seen": 1786872182.3941722,
+    "ast_hash": "ba7c8872bfc03be2ca5ab74748a5a751",
+    "semantic_hash": "ba7c8872bfc03be2ca5ab74748a5a751"
+  },
+  "index.html": {
+    "mtime": 1786542165.0367358,
+    "seen": 1786872182.3941748,
+    "ast_hash": "7a58cfe9fde8f0e7b280e9351730d9da",
+    "semantic_hash": "7a58cfe9fde8f0e7b280e9351730d9da"
+  },
+  "project/reports/builder_report.md": {
+    "mtime": 1786534464.2733195,
+    "seen": 1786872182.3941777,
+    "ast_hash": "e4193cfde7e6f004d2676d170719853a",
+    "semantic_hash": "e4193cfde7e6f004d2676d170719853a"
+  },
+  "robots.txt": {
+    "mtime": 1786523031.0144284,
+    "seen": 1786872182.3941824,
+    "ast_hash": "b09a0f6720a2e6423bdb2fdf4b521e58",
+    "semantic_hash": "b09a0f6720a2e6423bdb2fdf4b521e58"
+  }
+}

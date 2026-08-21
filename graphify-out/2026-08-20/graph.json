@@ -1,0 +1,293 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "frontend_dependencies",
+        "label": "Frontend CDN Dependencies",
+        "nodes": [
+          "tech_stack_gsap",
+          "tech_stack_threejs",
+          "tech_stack_tailwind"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "index.html"
+      },
+      {
+        "id": "project_documentation",
+        "label": "Project Documentation & Meta",
+        "nodes": [
+          "readme_md",
+          "agents_md",
+          "yandex_metrica_md",
+          "project_reports_builder_report_md"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.8,
+        "source_file": "README.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "GraphifyPlugin()",
+      "file_type": "code",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L12",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "graphifyplugin()",
+      "id": "opencode_plugins_graphify_graphifyplugin",
+      "community_name": "graphify.js"
+    },
+    {
+      "label": "graphify.js",
+      "file_type": "code",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "graphify.js",
+      "id": "opencode_plugins_graphify",
+      "community_name": "graphify.js"
+    },
+    {
+      "label": "IMPORTANT: keep the reminder string free of backticks and $(...) constructs.",
+      "file_type": "rationale",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "important: keep the reminder string free of backticks and $(...) constructs.",
+      "id": "opencode_plugins_graphify_rationale_4",
+      "community_name": "graphify.js"
+    },
+    {
+      "label": "index.html",
+      "file_type": "code",
+      "source_file": "index.html",
+      "rationale": "The main entry point containing markup, styles, and client-side logic.",
+      "community": 0,
+      "norm_label": "index.html",
+      "id": "index_html",
+      "community_name": "Landing Page Frontend Development"
+    },
+    {
+      "label": "GSAP + ScrollTrigger",
+      "file_type": "concept",
+      "source_file": "index.html",
+      "community": 0,
+      "norm_label": "gsap + scrolltrigger",
+      "id": "tech_stack_gsap",
+      "community_name": "Landing Page Frontend Development"
+    },
+    {
+      "label": "Tailwind CSS",
+      "file_type": "concept",
+      "source_file": "index.html",
+      "community": 0,
+      "norm_label": "tailwind css",
+      "id": "tech_stack_tailwind",
+      "community_name": "Landing Page Frontend Development"
+    },
+    {
+      "label": "Three.js",
+      "file_type": "concept",
+      "source_file": "index.html",
+      "community": 0,
+      "norm_label": "three.js",
+      "id": "tech_stack_threejs",
+      "community_name": "Landing Page Frontend Development"
+    },
+    {
+      "label": "Uptime Studio Landing Page",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "community": 0,
+      "norm_label": "uptime studio landing page",
+      "id": "uptime_studio_concept",
+      "community_name": "Landing Page Frontend Development"
+    },
+    {
+      "label": "Yandex.Metrica",
+      "file_type": "concept",
+      "source_file": "index.html",
+      "community": 0,
+      "norm_label": "yandex.metrica",
+      "id": "yandex_metrica_service",
+      "community_name": "Landing Page Frontend Development"
+    },
+    {
+      "label": "Builder Report",
+      "file_type": "document",
+      "source_file": "project/reports/builder_report.md",
+      "rationale": "Status report on project state and technical debt.",
+      "community": 0,
+      "norm_label": "builder report",
+      "id": "project_reports_builder_report_md",
+      "community_name": "Landing Page Frontend Development"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "rationale": "Provides project overview, tech stack, and architecture details.",
+      "community": 0,
+      "norm_label": "readme.md",
+      "id": "readme_md",
+      "community_name": "Landing Page Frontend Development"
+    },
+    {
+      "label": "YANDEX_METRICA.md",
+      "file_type": "document",
+      "source_file": "YANDEX_METRICA.md",
+      "rationale": "Instructions for configuring Yandex.Metrica analytics.",
+      "community": 0,
+      "norm_label": "yandex_metrica.md",
+      "id": "yandex_metrica_md",
+      "community_name": "Landing Page Frontend Development"
+    },
+    {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "rationale": "Defines the rules and workflow for using graphify within the project.",
+      "community": 2,
+      "norm_label": "agents.md",
+      "id": "agents_md",
+      "community_name": "AGENTS.md"
+    },
+    {
+      "label": "robots.txt",
+      "file_type": "document",
+      "source_file": "robots.txt",
+      "community": 3,
+      "norm_label": "robots.txt",
+      "id": "robots_txt",
+      "community_name": "robots.txt"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "opencode_plugins_graphify",
+      "target": "opencode_plugins_graphify_graphifyplugin"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "opencode_plugins_graphify_rationale_4",
+      "target": "opencode_plugins_graphify"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source": "index_html",
+      "target": "yandex_metrica_service"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source": "index_html",
+      "target": "tech_stack_gsap"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source": "index_html",
+      "target": "tech_stack_tailwind"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source": "index_html",
+      "target": "tech_stack_threejs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "project/reports/builder_report.md",
+      "source": "project_reports_builder_report_md",
+      "target": "index_html"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source": "readme_md",
+      "target": "index_html"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "YANDEX_METRICA.md",
+      "source": "yandex_metrica_md",
+      "target": "index_html"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "index.html",
+      "source": "index_html",
+      "target": "uptime_studio_concept"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "frontend_dependencies",
+      "label": "Frontend CDN Dependencies",
+      "nodes": [
+        "tech_stack_gsap",
+        "tech_stack_threejs",
+        "tech_stack_tailwind"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html"
+    },
+    {
+      "id": "project_documentation",
+      "label": "Project Documentation & Meta",
+      "nodes": [
+        "readme_md",
+        "agents_md",
+        "yandex_metrica_md",
+        "project_reports_builder_report_md"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "README.md"
+    }
+  ],
+  "built_at_commit": "30f45b4c6b1f00e57c77eebc105c297cfc5744e3"
+}

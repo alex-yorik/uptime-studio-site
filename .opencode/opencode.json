@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    ".opencode/plugins/graphify.js"
+  ],
+  "mcp": {
+    "brightdata": {
+      "type": "remote",
+      "url": "https://mcp.brightdata.com/sse?token={env:BRIGHTDATA_MCP_TOKEN}&groups=advanced_scraping",
+      "enabled": true
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  ".opencode/plugins/graphify.js": {
+    "mtime": 1786872170.9086583,
+    "seen": 1787220140.201348,
+    "ast_hash": "3ea725724bc8ebe483c9f13d6aa1124f",
+    "semantic_hash": "3ea725724bc8ebe483c9f13d6aa1124f"
+  },
+  "AGENTS.md": {
+    "mtime": 1786872170.9086583,
+    "seen": 1787220140.2013538,
+    "ast_hash": "6a47d64fcc136324ca395065a707ef76",
+    "semantic_hash": "6a47d64fcc136324ca395065a707ef76"
+  },
+  "README.md": {
+    "mtime": 1786176034.3862474,
+    "seen": 1787220140.2013583,
+    "ast_hash": "2ebd5dc65ecaffd6514a7402e1e6e2d8",
+    "semantic_hash": "2ebd5dc65ecaffd6514a7402e1e6e2d8"
+  },
+  "YANDEX_METRICA.md": {
+    "mtime": 1786534501.8826275,
+    "seen": 1787220140.2013624,
+    "ast_hash": "ba7c8872bfc03be2ca5ab74748a5a751",
+    "semantic_hash": "ba7c8872bfc03be2ca5ab74748a5a751"
+  },
+  "index.html": {
+    "mtime": 1787204546.9725015,
+    "seen": 1787220140.201372,
+    "ast_hash": "03da1693eec19e4f028a4efe4bbdfbf5",
+    "semantic_hash": ""
+  },
+  "project/reports/builder_report.md": {
+    "mtime": 1786534464.2733195,
+    "seen": 1787220140.2013745,
+    "ast_hash": "e4193cfde7e6f004d2676d170719853a",
+    "semantic_hash": "e4193cfde7e6f004d2676d170719853a"
+  },
+  "robots.txt": {
+    "mtime": 1786523031.0144284,
+    "seen": 1787220140.2013767,
+    "ast_hash": "b09a0f6720a2e6423bdb2fdf4b521e58",
+    "semantic_hash": "b09a0f6720a2e6423bdb2fdf4b521e58"
+  },
+  ".opencode/opencode.json": {
+    "mtime": 1786969835.8466284,
+    "seen": 1787220140.2013388,
+    "ast_hash": "e5f74d14a81702b55bdf53b33ec991d7",
+    "semantic_hash": ""
+  },
+  "blog/dental-bot.html": {
+    "mtime": 1787219989.3928683,
+    "seen": 1787220140.2013655,
+    "ast_hash": "1569e154f127bddaf57cbcd7380a4759",
+    "semantic_hash": ""
+  },
+  "blog/telegram-bot-40-percent.html": {
+    "mtime": 1787036028.5349102,
+    "seen": 1787220140.2013693,
+    "ast_hash": "2169a53c2dc47fcc3cceb8585aa36da6",
+    "semantic_hash": ""
+  },
+  "apple-touch-icon.png": {
+    "mtime": 1787069365.5677073,
+    "seen": 1787220140.201387,
+    "ast_hash": "3d276b22d680e2363416f66349e563ba",
+    "semantic_hash": ""
+  },
+  "favicon-96x96.png": {
+    "mtime": 1787069365.5677073,
+    "seen": 1787220140.2013915,
+    "ast_hash": "e491cbfedf04e445d6ab9836a5c4e3cd",
+    "semantic_hash": ""
+  },
+  "web-app-manifest-192x192.png": {
+    "mtime": 1787069365.5707073,
+    "seen": 1787220140.201394,
+    "ast_hash": "1c4ee2d337397736f17d7e5e3215d821",
+    "semantic_hash": ""
+  }
+}
