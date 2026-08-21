@@ -1,0 +1,13 @@
+{
+  "page_file": "src/pages/services/index.html",
+  "target_keywords": [
+    "разработка телеграм бота",
+    "заказать телеграм бота для бизнеса"
+  ],
+  "geo_region": "RU/Moscow",
+  "competitor_count": 5,
+  "business_type": "ProfessionalService",
+  "language": "ru",
+  "engine": "google",
+  "notes": "Лендинг студии разработки ботов. Основной интент — транзакционный (заказ), вторичный — информационный (как это работает). Обязательно проверить кириллические и латинские варианты ключа, наличие гео Москва/МО, битые ассеты (og-image/favicon/logo)."
+}
