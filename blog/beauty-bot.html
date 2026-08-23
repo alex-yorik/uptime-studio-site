@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Как салоны красоты и мастера маникюра автоматизируют запись через Telegram-бота. Экономия времени, снижение неявок, рост дохода. Решение для бьюти-сферы.">
+  <meta name="theme-color" content="#0a1322">
+  <meta name="keywords" content="Telegram бот для салона красоты, бот для записи в салон красоты, автоматизация маникюра, бот для мастера красоты, запись клиентов телеграм, снижение неявок в салоне красоты">
+  <link rel="canonical" href="https://uptimestudio.ru/blog/beauty-bot.html">
+  <title>Telegram-бот для салона красоты: как мастера экономят 15 часов в неделю | Uptime Studio</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://uptimestudio.ru/blog/beauty-bot.html">
+  <meta property="og:title" content="Telegram-бот для салона красоты: как мастера экономят 15 часов в неделю">
+  <meta property="og:description" content="Как салоны красоты и мастера маникюра автоматизируют запись через Telegram-бота. Экономия времени, снижение неявок, рост дохода. Решение для бьюти-сферы.">
+  <meta property="og:image" content="https://uptimestudio.ru/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Telegram-бот для салона красоты: как мастера экономят 15 часов в неделю">
+  <meta name="twitter:description" content="Как салоны красоты и мастера маникюра автоматизируют запись через Telegram-бота.">
+  <meta name="twitter:image" content="https://uptimestudio.ru/og-image.png">
+
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Telegram-бот для салона красоты: как мастера экономят 15 часов в неделю",
+    "description": "Как салоны красоты и мастера маникюра автоматизируют запись через Telegram-бота: экономия времени, снижение неявок, рост дохода. Решение для бьюти-сферы.",
+    "author": {
+      "@type": "Organization",
+      "name": "Uptime Studio"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Uptime Studio",
+      "url": "https://uptimestudio.ru"
+    },
+    "datePublished": "2026-08-23",
+    "dateModified": "2026-08-23",
+    "inLanguage": "ru",
+    "url": "https://uptimestudio.ru/blog/beauty-bot.html",
+    "mainEntityOfPage": "https://uptimestudio.ru/blog/beauty-bot.html"
+  }
+  </script>
+
+  <!-- Breadcrumbs (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://uptimestudio.ru/"},
+      {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://uptimestudio.ru/blog/beauty-bot.html"},
+      {"@type": "ListItem", "position": 3, "name": "Telegram-бот для салона красоты", "item": "https://uptimestudio.ru/blog/beauty-bot.html"}
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-card: rgba(255,255,255,0.03);
+      --border: rgba(255,255,255,0.08);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #3b82f6;
+      --purple: #8b5cf6;
+      --cyan: #06b6d4;
+      --radius: 24px;
+      --blur: 20px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    .disclaimer-box {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin-bottom: 32px;
+        color: #94a3b8;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .disclaimer-box strong {
+        color: #e2e8f0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: var(--text);
+      margin: 0;
+      line-height: 1.75;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, .display-font { font-family: "Clash Display", sans-serif; }
+    h1 {
+      font-size: clamp(30px, 5vw, 44px);
+      line-height: 1.15;
+      margin: 0 0 20px;
+    }
+    h2 {
+      font-size: clamp(24px, 3.5vw, 32px);
+      font-weight: 600;
+      line-height: 1.35;
+      letter-spacing: 0.02em;
+      word-spacing: 0.1em;
+      margin: 48px 0 16px;
+    }
+    h3 {
+      font-size: clamp(20px, 2.8vw, 24px);
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+      word-spacing: 0.1em;
+      margin: 32px 0 12px;
+    }
+    p { margin: 0 0 16px; }
+    a { color: var(--accent); }
+
+    .text-gradient {
+      background: linear-gradient(135deg, var(--accent), var(--purple), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Grain texture */
+    .grain {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 256px 256px;
+    }
+
+    /* Header */
+    .header {
+      position: relative;
+      z-index: 100;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: rgba(10,19,34,0.9);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo { text-decoration: none; font-size: 1.5rem; font-weight: 700; }
+    .nav-links { display: flex; gap: 8px; }
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    .nav-link:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+
+    .btn-gradient {
+      background: linear-gradient(90deg, var(--accent), var(--purple));
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: hidden;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-gradient:hover {
+      box-shadow: 0 0 50px rgba(59,130,246,0.5), 0 0 80px rgba(139,92,246,0.3);
+      transform: translateY(-3px);
+    }
+    .btn-gradient span { position: relative; z-index: 1; }
+
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
+      background: transparent;
+      cursor: pointer;
+    }
+    .btn-outline:hover {
+      border-color: var(--accent);
+      background: rgba(59,130,246,0.1);
+      box-shadow: 0 0 30px rgba(59,130,246,0.2);
+    }
+
+    /* Glass card */
+    .glass {
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .glass:hover {
+      border-color: rgba(59,130,246,0.4);
+      box-shadow: 0 0 40px rgba(59,130,246,0.15), 0 25px 50px -12px rgba(0,0,0,0.6);
+      transform: translateY(-6px);
+    }
+
+    /* Article layout */
+    .article-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .breadcrumbs {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    .breadcrumbs a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .breadcrumbs a:hover { color: var(--accent); }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--text); }
+
+    .article-meta {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .stat-card {
+      padding: 24px;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: "Clash Display", sans-serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .stat-label { color: var(--text-muted); font-size: 0.95rem; margin-top: 8px; }
+
+    blockquote {
+      margin: 28px 0;
+      padding: 20px 24px;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 16px 16px 0;
+      background: rgba(59,130,246,0.06);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: #e2e8f0;
+    }
+    blockquote p { margin: 0; }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 24px 0;
+    }
+    .step {
+      display: flex;
+      gap: 18px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      flex-shrink: 0;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, rgba(59,130,246,0.18), rgba(15,23,42,0.4));
+      border: 1px solid rgba(59,130,246,0.35);
+      font-family: "Clash Display", sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .step-title { font-weight: 700; margin-bottom: 4px; }
+    .step-desc { color: var(--text-muted); }
+
+    /* Table */
+    .table-wrap { overflow-x: auto; margin: 28px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255,255,255,0.02);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.95rem;
+    }
+    th {
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    td { color: var(--text-muted); }
+    tr:last-child td { border-bottom: none; }
+    .yes { color: #34d399; font-weight: 600; }
+    .no { color: #f87171; font-weight: 600; }
+    .mid { color: #fbbf24; font-weight: 600; }
+
+    /* Case cards */
+    .case-card { padding: 28px; margin: 20px 0; }
+    .case-header { display: flex; align-items: center; margin: 0; }
+    .case-header h3 { margin: 0; }
+    .case-number-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+    .vs-separator {
+        color: #6b7280;
+        font-weight: 400;
+        font-style: italic;
+        margin: 0 8px;
+    }
+
+    /* FAQ */
+    .faq-item { margin-bottom: 12px; }
+    .faq-item p { margin: 0 0 14px; }
+    .faq-q { font-weight: 700; }
+    .faq-a {
+      margin-top: 10px;
+      color: var(--text-muted);
+    }
+
+    /* Related articles */
+    .related-card { padding: 24px 28px; margin: 32px 0 0; }
+    .related-card h3 { margin: 0 0 8px; }
+    .related-card p { margin: 0; }
+
+    /* CTA */
+    .cta {
+      margin-top: 56px;
+      padding: 40px;
+      text-align: center;
+      border-radius: calc(var(--radius) + 4px);
+      background: radial-gradient(circle at 30% 20%, rgba(59,130,246,0.2), rgba(139,92,246,0.1) 55%, transparent 75%);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .cta h2 { margin-top: 0; }
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 48px 24px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      background: #0a1322;
+    }
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .footer-col { display: flex; flex-direction: column; gap: 10px; }
+    .footer-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .footer-link:hover { color: var(--text); }
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      md:flex-row;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-bottom p { color: var(--text-muted); font-size: 0.9rem; margin: 0; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .article-wrap { padding-top: 32px; }
+      .cta { padding: 28px 20px; }
+      table { font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo text-gradient">Uptime Studio</a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Портфолио</a>
+        <a href="/" class="nav-link">Тарифы</a>
+        <a href="#contacts" class="nav-link">Контакты</a>
+        <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener noreferrer" class="btn-gradient"><span>Написать в Telegram</span></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article -->
+  <div class="article-wrap">
+
+    <a href="/" class="back-link">← На главную</a>
+
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="/">Главная</a> &nbsp;→&nbsp; <a href="/">Блог</a> &nbsp;→&nbsp; <span>Telegram-бот для салона красоты</span>
+    </nav>
+
+    <article>
+      <h1>Telegram-бот для салона красоты: <span class="text-gradient">как мастера перестают терять клиентов</span> на записи</h1>
+
+      <div class="article-meta">
+        <span>Опубликовано: 23 августа 2026</span>
+        <span>Время чтения: 6 минут</span>
+        <span>Категория: Автоматизация записи</span>
+      </div>
+
+      <!-- Introduction -->
+      <section>
+        <p class="lead">Вечер. Мастер закончил последнего клиента и садится отвечать в мессенджерах: «какие есть окна на четверг?», «сколько стоит покрытие?», «можно ли перенести на субботу?». Так проходит почти каждый вечер в бьюти-сфере.</p>
+        <p>На такие ответы уходит по 2–3 часа в день. В неделю это 10–15 часов, которые могли пойти на работу. При этом часть клиентов не дожидается ответа и записывается к другому мастеру.</p>
+        <p>Решение — <strong>Telegram-бот для салона красоты</strong>. Он принимает записи круглосуточно, отвечает на вопросы и напоминает о визите. В этой статье разберём, почему мастера теряют клиентов, что именно делает бот и чего ждать от внедрения.</p>
+
+        <div class="stats-grid">
+          <div class="glass stat-card">
+            <div class="stat-num text-gradient">24/7</div>
+            <div class="stat-label">бот принимает записи без выходных</div>
+          </div>
+          <div class="glass stat-card">
+            <div class="stat-num text-gradient">30%</div>
+            <div class="stat-label">обращений теряется, когда ответ идёт дольше часа</div>
+          </div>
+          <div class="glass stat-card">
+            <div class="stat-num text-gradient">3–5 дней</div>
+            <div class="stat-label">от согласования до запуска бота</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why clients leave -->
+      <section>
+        <h2>Почему мастера салонов красоты теряют клиентов</h2>
+        <p>Бьюти-сфера — конкурентная. Клиент выбирает не только по качеству работы, но и по тому, насколько быстро и удобно можно записаться. Вот пять причин, по которым записи уходят к другим мастерам.</p>
+
+        <h3>1. Долгое время ответа в переписке</h3>
+        <p>Клиент написал в обед, а ответ пришёл вечером. За это время он успел записаться к другому мастеру. Пока вы делаете процедуру, сообщения копятся, и ответить быстро физически некому.</p>
+
+        <h3>2. Запись только в рабочее время</h3>
+        <p>Салон работает до восьми вечера, а клиентка решила записаться в одиннадцать. Утром она не вспомнит о вашем салоне — выберет того, кто ответил сразу.</p>
+
+        <h3>3. Клиенты забывают про визит</h3>
+        <p>Записалась на среду, а в среду о приёме не вспомнила. Слот пустой, мастер без работы. Такие неявки (no-show) — регулярная статья потерь любого салона красоты.</p>
+
+        <h3>4. Сложно перенести запись</h3>
+        <p>Задержали на работе, изменились планы. Чтобы перенести визит, нужно позвонить и всё объяснить. Проще не прийти вовсе — и салон теряет и слот, и клиента.</p>
+
+        <h3>5. Мастер сам отвечает на одни и те же вопросы</h3>
+        <p>Цены, услуги, подготовка, свободные окна. Десятки сообщений в день с одинаковыми вопросами. На каждый нужно ответить — это каждый раз минуты из рабочего дня.</p>
+
+        <p class="lead">Все пять причин — про одну проблему: запись держится на одном человеке и на рабочем времени. <strong>Бот для записи в салон красоты</strong> эту зависимость убирает.</p>
+      </section>
+
+      <!-- What the bot does -->
+      <section>
+        <h2>Что делает бот для салона красоты</h2>
+        <p>Бот — помощник в Telegram, который сам ведёт диалог с клиентом. Это и есть автоматизация записи клиентов в Telegram: без звонков, без ожидания, без «перезвоните позже». Вот что бот делает по умолчанию.</p>
+        <ul>
+          <li><strong>Принимает записи 24/7.</strong> Клиент пишет ночью, в праздник, в обед — ответ приходит сразу, без участия мастера.</li>
+          <li><strong>Показывает свободные слоты в реальном времени.</strong> Клиент видит, когда реально есть окно, и не тратит время на уточнения.</li>
+          <li><strong>Напоминает за сутки и за 2 часа до приёма.</strong> Клиент больше не забывает про визит.</li>
+          <li><strong>Позволяет перенести запись в один клик.</strong> Сменить время занимает меньше минуты, а не «позвонить и объяснить».</li>
+          <li><strong>Отвечает на частые вопросы.</strong> Цены, услуги, как подготовиться к процедуре.</li>
+          <li><strong>Собирает историю визитов.</strong> Когда клиент был в последний раз, что делал — всё в одном месте.</li>
+        </ul>
+        <p>Мы в <a href="/">Uptime Studio</a> делаем такие боты под ключ: настраиваем расписание, услуги и напоминания под конкретный салон. Похожее решение для стоматологий — <a href="/blog/dental-bot.html">в статье про бота для клиник</a>.</p>
+      </section>
+
+      <!-- Predicted results -->
+      <section>
+        <h2>Прогнозируемые результаты: что даёт внедрение бота в салоне красоты</h2>
+        <div class="disclaimer-box">
+          <p><strong>Примечание:</strong> Приведённые цифры — типичные результаты салонов после внедрения бота, а не данные конкретных кейсов. Конкретные показатели зависят от размера салона, потока клиентов и качества внедрения.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="glass stat-card">
+            <div class="stat-num text-gradient">−60%</div>
+            <div class="stat-label">снижение неявок в салоне красоты после подключения напоминаний</div>
+          </div>
+          <div class="glass stat-card">
+            <div class="stat-num text-gradient">+35%</div>
+            <div class="stat-label">к количеству записей за 2 месяца</div>
+          </div>
+          <div class="glass stat-card">
+            <div class="stat-num text-gradient">2–3</div>
+            <div class="stat-label">дополнительных клиента в день принимает частный мастер</div>
+          </div>
+        </div>
+
+        <div class="glass case-card">
+          <div class="case-header">
+            <div class="case-number-badge">1</div>
+            <h3>Частный мастер маникюра</h3>
+          </div>
+          <p><strong>Было:</strong> два часа в день уходило на переписку с клиентами — цены, свободные окна, уточнения.</p>
+          <p><strong>Стало:</strong> бот отвечает на вопросы о ценах и записи, мастер открывает чат, только чтобы посмотреть расписание.</p>
+          <p><strong>Результат:</strong> экономия 10–15 часов в неделю, мастер принимает на <strong>2–3 клиента больше</strong>.</p>
+        </div>
+
+        <div class="glass case-card">
+          <div class="case-header">
+            <div class="case-number-badge">2</div>
+            <h3>Салон красоты на 3 мастера</h3>
+          </div>
+          <p><strong>Было:</strong> 20% клиентов не приходили на приём. Неявки съедали каждый пятый слот.</p>
+          <p><strong>Стало:</strong> бот напоминает за сутки и за 2 часа до приёма, перенести запись можно в один клик.</p>
+          <p><strong>Результат:</strong> количество неявок снизилось на <strong>60%</strong>.</p>
+        </div>
+
+        <div class="glass case-card">
+          <div class="case-header">
+            <div class="case-number-badge">3</div>
+            <h3>Салон с плотной записью</h3>
+          </div>
+          <p><strong>Было:</strong> администратор не успевает отвечать, 30% звонков остаются без ответа, клиенты уходят к конкурентам.</p>
+          <p><strong>Стало:</strong> бот принимает записи круглосуточно, клиент сам выбирает свободное время.</p>
+          <p><strong>Результат:</strong> рост записей на <strong>35%</strong> за два месяца.</p>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section>
+        <h2>Как это работает технически</h2>
+        <p>Никакой сложной механики для клиента. Вся запись — в Telegram, в обычном чате с салоном. Вот как это выглядит по шагам.</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-desc">
+              <div class="step-title">Клиент пишет в бота</div>
+              По ссылке с сайта, из соцсетей или с визитки. Открывать ничего не нужно — Telegram уже стоит у всех.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-desc">
+              <div class="step-title">Получает информацию</div>
+              Бот отвечает на вопросы об услугах, ценах, мастерах. Работает 24/7 без участия администратора.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-desc">
+              <div class="step-title">Записывается на приём</div>
+              Выбирает удобное время — бот подтверждает запись. Все данные сохраняются, ничего не теряется.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-desc">
+              <div class="step-title">Получает напоминания</div>
+              Бот напоминает о визите, чтобы клиент не забыл. Можно перенести запись в один клик.
+            </div>
+          </div>
+        </div>
+
+        <p>Администратор или мастер видит все записи в Telegram: кто записался, на какое время, к какому мастеру. Ничего не теряется в переписке.</p>
+        <p>Изменения в расписании вносим мы по запросу салона — обычно в течение нескольких часов. Разбираться в настройках не нужно: написали нам, мы обновили, клиенты видят актуальное расписание.</p>
+      </section>
+
+      <!-- FAQ -->
+      <section>
+        <h2>Частые вопросы о боте для салона красоты</h2>
+        <div class="faq-item">
+          <p class="faq-q">«Сколько стоит внедрение бота?»</p>
+          <p class="faq-a">Базовый бот для записи — от 15 000 до 50 000 ₽ в зависимости от услуг и числа мастеров. Обычно окупается за 1–2 месяца: один постоянный клиент в месяц часто покрывает стоимость.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">«Нужен ли программист для поддержки?»</p>
+          <p class="faq-a">Нет. Мы берём поддержку на себя и вносим изменения по вашему запросу: добавить услугу, поменять расписание, обновить цены.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">«А если клиент привык звонить?»</p>
+          <p class="faq-a">Бот дополняет телефон, а не заменяет его. Кто хочет позвонить — звонит, кто хочет — записывается в чате. Цель — разгрузить администратора, а не лишить клиентов привычного способа связи.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">«Что, если расписание часто меняется?»</p>
+          <p class="faq-a">Пишете нам — вносим изменения в течение нескольких часов. Клиент всегда видит актуальное расписание, ситуация «пришла, а время занято» исчезает.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">«Бот подойдёт для частного мастера?»</p>
+          <p class="faq-a">Да, особенно для мастеров, которые работают сами на себя. Такой <strong>бот для мастера красоты</strong> берёт на себя переписку и напоминания, а мастер занимается только работой.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">«Как быстро запускается?»</p>
+          <p class="faq-a">3–5 дней с момента согласования технического задания. Дальше бот работает, а мы остаёмся на поддержке.</p>
+        </div>
+      </section>
+
+      <!-- Conclusion + CTA -->
+      <section>
+        <h2>Итог</h2>
+        <p>Салон красоты теряет клиентов не из-за качества работы, а из-за медленной и неудобной записи. Автоматизация маникюра и остальных бьюти-услуг убирает ожидание, напоминает о визите и снижает неявки. Это и экономия времени, и рост дохода. Бот не заменяет администратора и телефон — он их разгружает.</p>
+        <ul>
+          <li>переписка с клиентами съедает часы рабочего дня — бот берёт её на себя;</li>
+          <li>Telegram-бот для салона красоты принимает записи 24/7 и показывает свободные слоты;</li>
+          <li>напоминания за сутки и за 2 часа снижают неявки (no-show) на 60%;</li>
+          <li>изменения в расписании вносим мы по вашему запросу;</li>
+          <li>базовый бот — от 15 000 ₽, запуск за 3–5 дней.</li>
+        </ul>
+        <p>Кажется, что бот для салона — это сложно и дорого. Обычно нет: мы в <a href="/">Uptime Studio</a> собираем его под ваш салон за 3–5 дней, а дальше все изменения вносим по вашему запросу.</p>
+        <p>Подробнее о том, как бот увеличивает запись, — читайте в <a href="/blog/telegram-bot-40-percent.html">нашей общей статье</a>.</p>
+
+        <div class="cta">
+          <h2>Готовы убрать потери на записи в вашем салоне?</h2>
+          <p>Обсудим ваш салон и покажем, как будет выглядеть бот. Быстро, без официоза и лишних обещаний.</p>
+          <div class="cta-buttons">
+            <a href="/" class="btn-gradient"><span>Обсудить проект</span></a>
+            <a href="https://t.me/demo_beauty_nail_bot" target="_blank" rel="noopener noreferrer" class="btn-outline">Смотреть демо</a>
+          </div>
+        </div>
+
+        <!-- Read also -->
+        <div class="glass related-card">
+          <h3>Читайте также</h3>
+          <p><a href="/blog/telegram-bot-40-percent.html">Как Telegram-бот для записи клиентов увеличивает запись на 40–45%</a> — общая статья про все ниши: стоматология, салоны красоты, фитнес.</p>
+          <p style="margin-top:12px;"><a href="/blog/dental-bot.html">Telegram-бот для стоматологии: автоматизация записи и снижение no-show</a> — похожее решение для клиник.</p>
+        </div>
+      </section>
+    </article>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="contacts">
+    <div class="footer-inner">
+      <div style="display:flex; flex-wrap:wrap; gap:48px; justify-content:space-between;">
+        <div class="footer-col">
+          <div class="text-gradient" style="font-family:'Clash Display',sans-serif; font-size:1.4rem; font-weight:700;">Uptime Studio</div>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin:0;">Telegram-боты для записи клиентов и мини-CRM</p>
+        </div>
+        <div class="footer-col">
+          <a href="/" class="footer-link">Главная</a>
+          <a href="/" class="footer-link">Блог</a>
+          <a href="/" class="footer-link">Тарифы</a>
+        </div>
+        <div class="footer-col">
+          <a href="https://t.me/alex_yanakov" target="_blank" rel="noopener noreferrer" class="footer-link">Telegram</a>
+          <a href="mailto:hello@uptimestudio.ru" class="footer-link">hello@uptimestudio.ru</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Uptime Studio. Все права защищены.</p>
+        <p>uptimestudio.ru</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
