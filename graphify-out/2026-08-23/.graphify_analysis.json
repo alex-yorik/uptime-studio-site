@@ -1,0 +1,77 @@
+{
+  "communities": {
+    "0": [
+      "index_html",
+      "project_reports_builder_report_md",
+      "readme_md",
+      "tech_stack_gsap",
+      "tech_stack_tailwind",
+      "tech_stack_threejs",
+      "uptime_studio_concept",
+      "yandex_metrica_md",
+      "yandex_metrica_service"
+    ],
+    "1": [
+      "opencode_plugins_graphify",
+      "opencode_plugins_graphify_graphifyplugin",
+      "opencode_plugins_graphify_rationale_4"
+    ],
+    "2": [
+      "agents_md"
+    ],
+    "3": [
+      "robots_txt"
+    ]
+  },
+  "cohesion": {
+    "0": 0.2222222222222222,
+    "1": 0.6666666666666666,
+    "2": 1.0,
+    "3": 1.0
+  },
+  "gods": [
+    {
+      "id": "opencode_plugins_graphify_rationale_4",
+      "label": "IMPORTANT: keep the reminder string free of backticks and $(...) constructs.",
+      "degree": 1
+    },
+    {
+      "id": "tech_stack_gsap",
+      "label": "GSAP + ScrollTrigger",
+      "degree": 1
+    },
+    {
+      "id": "tech_stack_tailwind",
+      "label": "Tailwind CSS",
+      "degree": 1
+    },
+    {
+      "id": "tech_stack_threejs",
+      "label": "Three.js",
+      "degree": 1
+    },
+    {
+      "id": "uptime_studio_concept",
+      "label": "Uptime Studio Landing Page",
+      "degree": 1
+    },
+    {
+      "id": "yandex_metrica_service",
+      "label": "Yandex.Metrica",
+      "degree": 1
+    },
+    {
+      "id": "project_reports_builder_report_md",
+      "label": "Builder Report",
+      "degree": 1
+    }
+  ],
+  "surprises": [],
+  "questions": [
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `GSAP + ScrollTrigger`, `Tailwind CSS`, `Three.js` to the rest of the system?",
+      "why": "6 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}
