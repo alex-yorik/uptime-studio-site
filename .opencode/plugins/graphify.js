@@ -1,4 +1,4 @@
-// graphify OpenCode plugin (V2)
+// graphify OpenCode plugin (canonical: V2 + path-scoped id)
 // Injects a knowledge graph reminder before the first shell command of a
 // session when the graph exists.
 //
@@ -15,12 +15,16 @@ import { join } from "path";
 const REMINDER =
   'echo "[graphify] knowledge graph at graphify-out/. For focused questions, run graphify query with your question (scoped subgraph, usually much smaller than GRAPH_REPORT.md) instead of grepping raw files. Read GRAPH_REPORT.md only for broad architecture context." ; ';
 
-// A project and the copy in ~/.opencode can each load, and they share one
-// record of who was reminded, so a command gets one reminder.
+// OpenCode deduplicates plugins by id: the loser is not loaded and is reported
+// as a failed plugin ("Duplicate plugin ID"). A project and the global copy in
+// ~/.opencode can each load, so the id carries this file's location and is
+// unique per deployment path. The copies share one record of who was reminded
+// (globalThis), so a command still gets one reminder.
+const location = [...import.meta.url].reduce((hash, ch) => (Math.imul(hash, 31) + ch.charCodeAt(0)) >>> 0, 7);
 const reminded = (globalThis.__graphifyReminded ??= new Set());
 
 export default {
-  id: "graphify",
+  id: `graphify-${location.toString(16)}`,
   name: "Graphify",
   async setup(ctx) {
     await ctx.tool.hook("execute.before", (event) => {
